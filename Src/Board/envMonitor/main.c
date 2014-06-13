@@ -49,7 +49,7 @@
 
 #define ADVERTISING_LED_PIN_NO               LED_0                                      /**< Is on when device is advertising. */
 #define CONNECTED_LED_PIN_NO                 LED_1                                      /**< Is on when device has connected. */
-#define ASSERT_LED_PIN_NO                    LED_7                                      /**< Is on when application has asserted. */
+#define ASSERT_LED_PIN_NO                    LED_2                                      /**< Is on when application has asserted. */
 
 #define DEVICE_NAME                          "Nordic_HRM"                               /**< Name of device. Will be included in the advertising data. */
 #define MANUFACTURER_NAME                    "NordicSemiconductor"                      /**< Manufacturer. Will be passed to Device Information Service. */
