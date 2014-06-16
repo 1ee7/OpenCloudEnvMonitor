@@ -1,0 +1,15 @@
+eclipse.preferences.version=1
+environment/project/0.854816632.496454896/PATH/delimiter=;
+environment/project/0.854816632.496454896/PATH/operation=replace
+environment/project/0.854816632.496454896/PATH/value=D\:/Program Files/eclipse/utils;;C\:/Program Files/Java/jre7/bin/client;C\:/Program Files/Java/jre7/bin;C\:/Program Files/Java/jre7/lib/i386;D\:\\Program Files\\EasyPHP-DevServer-13.1VC11\\binaries\\php\\php_runningversion;C\:\\Python27\\Lib\\site-packages\\PyQt4;C\:\\Program Files\\Common Files\\NetSarang;C\:\\Windows\\system32;C\:\\Windows;C\:\\Windows\\System32\\Wbem;C\:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;d\:\\Program Files\\SciTools/bin/pc-win32;C\:\\Python27;C\:\\Python27\\DLLs;C\:\\Python27\\Scripts;C\:\\Python27\\Lib\\site-packages\\vtk;C\:\\Python27\\gnuplot\\binary;C\:\\Python27\\Lib\\site-packages\\osgeo;d\:\\Program Files\\pythonxy\\SciTE-3.2.2-1;d\:\\Program Files\\pythonxy\\console;C\:\\MinGW32-xy\\bin;d\:\\Program Files\\pythonxy\\swig;d\:\\Program Files\\pythonxy\\gettext\\bin;C\:\\Program Files\\MiKTeX 2.9\\miktex\\bin\\;C\:\\Program Files\\TortoiseSVN\\bin;C\:\\Program Files\\TortoiseHg\\;C\:\\Program Files\\TortoiseGit\\bin;C\:\\Program Files\\Git\\cmd;C\:\\Program Files\\Git\\bin;C\:\\Program Files\\IVI Foundation\\IVI\\bin;C\:\\Program Files\\IVI Foundation\\VISA\\WinNT\\Bin\\;C\:\\Program Files\\Nordic Semiconductor\\nrf51\\bin\\;C\:\\Program Files\\Scrivener;C\:\\Program Files\\GNU Tools ARM Embedded\\4.8 2014q1\\bin;D\:\\Program Files\\eclipse;
+environment/project/0.854816632.496454896/RTT_CC/delimiter=;
+environment/project/0.854816632.496454896/RTT_CC/operation=replace
+environment/project/0.854816632.496454896/RTT_CC/value=gcc
+environment/project/0.854816632.496454896/RTT_EXEC_PATH/delimiter=;
+environment/project/0.854816632.496454896/RTT_EXEC_PATH/operation=replace
+environment/project/0.854816632.496454896/RTT_EXEC_PATH/value=
+environment/project/0.854816632.496454896/RTT_ROOT/delimiter=;
+environment/project/0.854816632.496454896/RTT_ROOT/operation=replace
+environment/project/0.854816632.496454896/RTT_ROOT/value=
+environment/project/0.854816632.496454896/append=true
+environment/project/0.854816632.496454896/appendContributed=true
