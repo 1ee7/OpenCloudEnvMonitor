@@ -35,4 +35,4 @@ DEVICE_VARIANT := xxaa
 USE_SOFTDEVICE := S110
 #USE_SOFTDEVICE := s210
 
-include $(SDK_PATH)/Source/templates/gcc/Makefile.common
+include $(SDK_PATH)Source/templates/gcc/Makefile.common
