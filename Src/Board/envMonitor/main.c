@@ -26,8 +26,8 @@
 #include "app_error.h"
 #include "nrf_gpio.h"
 #include "nrf51_bitfields.h"
-#include "ble.h"
-#include "ble_hci.h"
+#include "s110/ble.h"
+#include "s110/ble_hci.h"
 #include "ble_srv_common.h"
 #include "ble_advdata.h"
 #include "ble_bas.h"
@@ -42,7 +42,7 @@
 #include "ble_bondmngr.h"
 #include "ble_debug_assert_handler.h"
 #include "pstorage.h"
-
+#include "debug.h"
 
 #define WAKEUP_BUTTON_PIN                    BUTTON_0                                   /**< Button used to wake up the application. */
 #define BONDMNGR_DELETE_BUTTON_PIN_NO        BUTTON_1                                   /**< Button used for deleting all bonded centrals during startup. */
@@ -51,8 +51,8 @@
 #define CONNECTED_LED_PIN_NO                 LED_1                                      /**< Is on when device has connected. */
 #define ASSERT_LED_PIN_NO                    LED_2                                      /**< Is on when application has asserted. */
 
-#define DEVICE_NAME                          "Nordic_HRM"                               /**< Name of device. Will be included in the advertising data. */
-#define MANUFACTURER_NAME                    "NordicSemiconductor"                      /**< Manufacturer. Will be passed to Device Information Service. */
+#define DEVICE_NAME                          "EnvMonitor"                               /**< Name of device. Will be included in the advertising data. */
+#define MANUFACTURER_NAME                    "xiaogan studio"                      /**< Manufacturer. Will be passed to Device Information Service. */
 #define APP_ADV_INTERVAL                     40                                         /**< The advertising interval (in units of 0.625 ms. This value corresponds to 25 ms). */
 #define APP_ADV_TIMEOUT_IN_SECONDS           180                                        /**< The advertising timeout in units of seconds. */
 
@@ -755,12 +755,17 @@ static void power_manage(void)
  */
 int main(void)
 {
+	debug_init();
+	debug("-------------------------------------\r\n");
+	debug("--  EnvMonitor  Start            -----\r\n");
+
+#if 0
     // Initialize.
     leds_init();
     buttons_init();
     ble_stack_init();
     bond_manager_init();
-    timers_init();
+    //timers_init();
     gap_params_init();
     advertising_init();
     services_init();
@@ -771,11 +776,12 @@ int main(void)
     // Start execution.
     application_timers_start();
     advertising_start();
-
+#endif
     // Enter main loop.
     for (;;)
     {
-        power_manage();
+        //power_manage();
+    	debug("####\r\n");
     }
 }
 

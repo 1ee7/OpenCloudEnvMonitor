@@ -36,11 +36,21 @@
 								<option id="org.eclipse.cdt.build.core.settings.holder.incpaths.2078620785" name="Include Paths" superClass="org.eclipse.cdt.build.core.settings.holder.incpaths" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;../../../../prebuild/toolchain/GNU Tools ARM Embedded/4.8 2014q1/arm-none-eabi/include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;../../../../prebuild/toolchain/GNU Tools ARM Embedded/4.8 2014q1/lib/gcc/arm-none-eabi/4.8.3/include&quot;"/>
+<<<<<<< Updated upstream
 									<listOptionValue builtIn="false" value="&quot;${project_loc}/../../Include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${project_loc}/../../Include/app_common&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${project_loc}/../../Include/ble&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${project_loc}/../../Include/ble/ble_services&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${project_loc}/../../Include/ble/softdevice&quot;"/>
+=======
+									<listOptionValue builtIn="false" value="&quot;${project_loc}/../../../Include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${project_loc}/../../../Include/ble&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${project_loc}/../../../Include/app_common&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${project_loc}/../../../Include/ble/ble_services&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${project_loc}/../../../Include/ble/softdevice&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${project_loc}/../../../Include/sd_common&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${project_loc}/../../../Include/sdk&quot;"/>
+>>>>>>> Stashed changes
 								</option>
 								<inputType id="org.eclipse.cdt.build.core.settings.holder.inType.894312857" languageId="org.eclipse.cdt.core.gcc" languageName="GNU C" sourceContentType="org.eclipse.cdt.core.cSource,org.eclipse.cdt.core.cHeader" superClass="org.eclipse.cdt.build.core.settings.holder.inType"/>
 							</tool>
@@ -83,11 +93,21 @@
 								<option id="org.eclipse.cdt.build.core.settings.holder.incpaths.724516294" name="Include Paths" superClass="org.eclipse.cdt.build.core.settings.holder.incpaths" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;../../../../prebuild/toolchain/GNU Tools ARM Embedded/4.8 2014q1/arm-none-eabi/include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;../../../../prebuild/toolchain/GNU Tools ARM Embedded/4.8 2014q1/lib/gcc/arm-none-eabi/4.8.3/include&quot;"/>
+<<<<<<< Updated upstream
 									<listOptionValue builtIn="false" value="&quot;${project_loc}/../../Include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${project_loc}/../../Include/app_common&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${project_loc}/../../Include/ble&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${project_loc}/../../Include/ble/ble_services&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${project_loc}/../../Include/ble/softdevice&quot;"/>
+=======
+									<listOptionValue builtIn="false" value="&quot;${project_loc}/../../../Include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${project_loc}/../../../Include/app_common&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${project_loc}/../../../Include/ble&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${project_loc}/../../../Include/ble/ble_services&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${project_loc}/../../../Include/ble/softdevice&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${project_loc}/../../../Include/sd_common&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${project_loc}/../../../Include/sdk&quot;"/>
+>>>>>>> Stashed changes
 								</option>
 								<inputType id="org.eclipse.cdt.build.core.settings.holder.inType.1912207308" languageId="org.eclipse.cdt.core.gcc" languageName="GNU C" sourceContentType="org.eclipse.cdt.core.cSource,org.eclipse.cdt.core.cHeader" superClass="org.eclipse.cdt.build.core.settings.holder.inType"/>
 							</tool>
@@ -106,6 +126,7 @@
 		<resource resourceType="PROJECT" workspacePath="/envMonitor"/>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
+<<<<<<< Updated upstream
 	<storageModule moduleId="scannerConfiguration">
 		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 		<scannerConfigBuildInfo instanceId="0.854816632">
@@ -115,6 +136,8 @@
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 		</scannerConfigBuildInfo>
 	</storageModule>
+=======
+>>>>>>> Stashed changes
 	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets">
 		<buildTargets>
 			<target name="env_monitor" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
@@ -161,5 +184,14 @@
 				<runAllBuilders>true</runAllBuilders>
 			</target>
 		</buildTargets>
+	</storageModule>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="0.854816632">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="0.854816632.496454896">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
 	</storageModule>
 </cproject>

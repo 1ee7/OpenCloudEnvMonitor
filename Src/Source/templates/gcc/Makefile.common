@@ -94,8 +94,8 @@ vpath %.s $(ASSEMBLER_SOURCE_PATHS)
 -include $(addprefix $(OBJECT_DIRECTORY)/, $(COBJS:.o=.d))
 
 ### Targets
-debug:    CFLAGS += -DDEBUG -g3 -O0
-debug:    ASMFLAGS += -DDEBUG -g3 -O0
+debug:    CFLAGS += -DDEBUG -g3 -O0 -DENABLE_DEBUG_LOG_SUPPORT
+debug:    ASMFLAGS += -DDEBUG -g3 -O0 -DENABLE_DEBUG_LOG_SUPPORT
 debug:    $(OUTPUT_BINARY_DIRECTORY)/$(OUTPUT_FILENAME).bin $(OUTPUT_BINARY_DIRECTORY)/$(OUTPUT_FILENAME).hex
 
 .PHONY: release
