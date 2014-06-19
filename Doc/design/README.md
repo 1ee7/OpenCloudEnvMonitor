@@ -20,3 +20,12 @@
    保存软件前期设计中的一些检讨资料。
    目前有如下内容：
    - EnvMonitor整体功能拆分
+
+# envMonitor.asta
+  系统UML设计图表,保存系统软件设计相关的UML图纸。
+  - System overview
+  - 用户升级序列图(sequence diagram)
+  - 固件启动序列图(sequence diagram)
+
+# memory_layout.xlsx
+  内部Flash和外部SPI Flash数据布局设计文件。标明数据在Flash中的摆放顺序。
