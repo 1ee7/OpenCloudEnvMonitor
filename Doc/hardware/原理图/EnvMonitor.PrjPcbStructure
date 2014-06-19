@@ -1,0 +1,5 @@
+Record=SheetSymbol|SourceDocument=EnvMonitor.SchDoc|Designator=U_Flash|SchDesignator=U_Flash|FileName=Flash.SchDoc|SymbolType=Normal|RawFileName=Flash.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=EnvMonitor.SchDoc|Designator=U_I2C|SchDesignator=U_I2C|FileName=I2C.SchDoc|SymbolType=Normal|RawFileName=I2C.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=EnvMonitor.SchDoc|Designator=U_Power|SchDesignator=U_Power|FileName=Power.SchDoc|SymbolType=Normal|RawFileName=Power.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=EnvMonitor.SchDoc|Designator=U_Radio|SchDesignator=U_Radio|FileName=Radio.SchDoc|SymbolType=Normal|RawFileName=Radio.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=TopLevelDocument|FileName=EnvMonitor.SchDoc
