@@ -116,8 +116,8 @@ typedef enum
  */
 typedef enum
 {
-	NRF_ESB_XOSC_CTL_AUTO,		///< Switch XOSC on/off automatically
-	NRF_ESB_XOSC_CTL_MANUAL	    ///< Switch XOSC on/off manually
+  NRF_ESB_XOSC_CTL_AUTO,    ///< Switch XOSC on/off automatically
+  NRF_ESB_XOSC_CTL_MANUAL     ///< Switch XOSC on/off manually
 } nrf_esb_xosc_ctl_t;
 
 /******************************************************************************/

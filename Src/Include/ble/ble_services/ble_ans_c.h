@@ -345,4 +345,3 @@ uint32_t ble_ans_c_service_delete(void);
 #endif // BLE_ANS_C_H__
 
 /** @} */
-

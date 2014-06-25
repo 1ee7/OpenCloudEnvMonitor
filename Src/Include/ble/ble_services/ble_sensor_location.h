@@ -11,7 +11,7 @@
  */
 
  /* Attention!
-*  To maintain compliance with Nordic Semiconductor ASA’s Bluetooth profile
+*  To maintain compliance with Nordic Semiconductor ASAæŠ¯ Bluetooth profile
 *  qualification listings, this section of source code must not be modified.
 */
  
@@ -38,3 +38,4 @@ typedef enum {
 #define BLE_NB_MAX_SENSOR_LOCATIONS 14
 
 #endif // BLE_SENSOR_LOCATION_H__
+

@@ -81,3 +81,4 @@ uint32_t app_fifo_flush(app_fifo_t * p_fifo);
 #endif // APP_FIFO_H__
 
 /** @} */
+

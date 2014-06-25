@@ -1,0 +1,10 @@
+#--unknown-language--@+leo-ver=4-thin
+#--unknown-language--@+node:gan0ling.20140624153650.1307:@shadow Makefile.windows
+#--unknown-language--@@language unknown_language
+PROGFILES := ../../../prebuild/toolchain
+GNU_INSTALL_ROOT := $(PROGFILES)/GNU Tools ARM Embedded/4.8 2014q1
+GNU_VERSION := 4.8.3
+GNU_PREFIX := arm-none-eabi
+
+#--unknown-language--@-node:gan0ling.20140624153650.1307:@shadow Makefile.windows
+#--unknown-language--@-leo

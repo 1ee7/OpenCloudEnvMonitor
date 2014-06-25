@@ -193,7 +193,7 @@ uint8_t console_get_char(void)
   }
   return ch;
 }  
-  
+
 void console_put_decbyte(uint8_t b) // b is in the range [0 255]
 {
   uint8_t b0;
@@ -500,5 +500,4 @@ bool console_tx_completed(void)
   return hal_uart_tx_buf_empty();
 }
 */
-
 

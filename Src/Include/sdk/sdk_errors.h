@@ -98,4 +98,3 @@ typedef uint32_t api_result_t;
 /** @} */
 
 #endif // SDK_ERRORS_H__
-

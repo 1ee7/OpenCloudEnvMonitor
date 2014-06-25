@@ -79,3 +79,4 @@ void ble_rpc_cmd_handle(void * p_event_data, uint16_t event_size);
 #endif // BLE_RPC_CMD_DECODER_H__
 
 /** @} */
+

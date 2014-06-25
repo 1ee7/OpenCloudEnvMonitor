@@ -342,7 +342,8 @@ typedef api_result_t (*dm_event_cb_t)(dm_handle_t const    * p_handle,
 typedef struct
 {
     bool clear_persistent_data; /**< Set to true in case the module should clear all persistent data */
-}dm_init_param_t;
+} dm_init_param_t;
+
 
 /**
  * @brief Application Registration Parameters.
@@ -718,4 +719,3 @@ api_result_t dm_handle_initialize(dm_handle_t    * p_handle);
 /** @} */
 /** @} */
 #endif // DEVICE_MANAGER_H__
-

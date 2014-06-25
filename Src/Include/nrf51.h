@@ -1230,4 +1230,3 @@ typedef struct {                                    /*!< GPIO Structure         
 
 
 #endif  /* nRF51_H */
-

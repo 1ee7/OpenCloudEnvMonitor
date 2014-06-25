@@ -74,3 +74,4 @@ uint32_t ble_tps_tx_power_level_set(ble_tps_t * p_tps, int8_t tx_power_level);
 #endif // BLE_TPS_H__
 
 /** @} */
+

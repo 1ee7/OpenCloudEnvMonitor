@@ -340,4 +340,3 @@ uint16_t console_get_hexword(void);
 bool console_tx_completed(void);
 
 #endif
-

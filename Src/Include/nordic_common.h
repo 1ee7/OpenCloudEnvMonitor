@@ -18,7 +18,8 @@
 
 /** Swaps the upper byte with the lower byte in a 16 bit variable */
 //lint -emacro((572),SWAP) // Suppress warning 572 "Excessive shift value"
-#define SWAP(x) ((((x)&0xFF)<<8)|(((x)>>8)&0xFF))
+#define SWAP(x) ((((x)&0xFF)<<8)| \
+                (((x)>>8)&0xFF))
 
 /** The upper 8 bits of a 16 bit value */
 //lint -emacro(572,MSB) // Suppress warning 572 "Excessive shift value"

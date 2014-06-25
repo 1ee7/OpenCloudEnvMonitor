@@ -84,3 +84,4 @@ uint32_t ble_gls_db_record_delete(uint8_t record_num);
 /** @} */
 
 /** @endcond */
+

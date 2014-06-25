@@ -93,3 +93,4 @@ uint32_t ble_dis_init(const ble_dis_init_t * p_dis_init);
 #endif // BLE_DIS_H__
 
 /** @} */
+

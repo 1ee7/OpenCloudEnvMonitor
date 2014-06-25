@@ -291,7 +291,7 @@ typedef struct
 {
     ble_gap_id_key_t  peer_id;   /**< IRK and/or address of peer. */
     uint8_t          id_bitmap;  /**< Indicates information if this is assigned or has valid IRK or Address or both. */
-}peer_id_t;
+} peer_id_t;
 
 STATIC_ASSERT(sizeof(peer_id_t) % 4 == 0);
 
@@ -303,7 +303,7 @@ STATIC_ASSERT(sizeof(peer_id_t) % 4 == 0);
 typedef struct
 {
     ble_gap_enc_key_t      peer_enc_key ;     /**< Local LTK info, central IRK and address */
-}bond_context_t;
+} bond_context_t;
 
 STATIC_ASSERT(sizeof(bond_context_t) % 4 == 0); /**< Check to ensure bond information is a multiple of 4. */
 
@@ -314,27 +314,26 @@ typedef struct
 {
     uint16_t    size;                                      /**< Size of attributes stored. */
     uint8_t     attributes[DM_GATT_SERVER_ATTR_MAX_SIZE];  /**< Array to hold server attributes. */
-}dm_gatt_server_context_t;
+} dm_gatt_server_context_t;
 
 /**
- * @breif GATT Client context information. Place holder for now.
- */
+* @breif GATT Client context information. Place holder for now.
+*/
 typedef struct
 {
-    void * dummy;    /**< Place holder, currently unused. */
+   void * dummy;    /**< Place holder, currently unused. */
 }dm_gatt_client_context_t;
 
 /**
- * @breif Service context definition.
- */
+* @breif Service context definition.
+*/
 typedef union
 {
-    dm_gatt_server_context_t   gatts_context; /**< GATT Server context. */
-    dm_gatt_client_context_t   gattc_context; /**< GATT Client context. */
+   dm_gatt_server_context_t   gatts_context; /**< GATT Server context. */
+   dm_gatt_client_context_t   gattc_context; /**< GATT Client context. */
 }service_context_t;
 STATIC_ASSERT(sizeof(service_context_t) % 4 == 0);
 STATIC_ASSERT((DEVICE_MANAGER_APP_CONTEXT_SIZE % 4) == 0);
-
 /**
  * @brief Connection instance definition. Maintains information with respect to an active peer.
  */
@@ -344,56 +343,56 @@ typedef struct
     uint16_t          conn_handle;     /**< Connection handle for the device. */
     uint8_t           state;           /**< Link status. */
     uint8_t           bonded_dev_id;   /**< In case device is bonded, points to the corresponding bonded device. This index can be used to index service and bond context as well. */
-}connection_instance_t;
+} connection_instance_t;
 
 /**
- * @brief Application instance definition. Maintains information with respect to a registered
- *        application.
- */
+* @brief Application instance definition. Maintains information with respect to a registered
+*        application.
+*/
 typedef struct
 {
-    dm_event_cb_t            ntf_cb;     /**< Callback registered with the application. */
-    ble_gap_sec_params_t     sec_param;  /**< Local security parameters registered by the application. */
-    uint8_t                  state;      /**< Application state. Currently is used only for knowing if any security procedure is in progress and/or a security procedure is pending to be requested. */
-    uint8_t                  service;    /**< Service registered by the application. */
+   dm_event_cb_t            ntf_cb;     /**< Callback registered with the application. */
+   ble_gap_sec_params_t     sec_param;  /**< Local security parameters registered by the application. */
+   uint8_t                  state;      /**< Application state. Currently is used only for knowing if any security procedure is in progress and/or a security procedure is pending to be requested. */
+   uint8_t                  service;    /**< Service registered by the application. */
 }application_instance_t;
 
 /**
- * @brief Function pointers used to perform necessary action of storing each of the service context
- *        as registered by the application.
- * @param[in] p_block_handle Storage block identifier.
- * @param[in] p_handle       Device handle identifying device that is being stored.
- */
+* @brief Function pointers used to perform necessary action of storing each of the service context
+*        as registered by the application.
+* @param[in] p_block_handle Storage block identifier.
+* @param[in] p_handle       Device handle identifying device that is being stored.
+*/
 typedef api_result_t (*service_context_access_t)(pstorage_handle_t const * p_block_handle,
-                                                dm_handle_t       const * p_handle);
+                                               dm_handle_t       const * p_handle);
 
 /**
- * @brief Function pointers used to perform necessary action of applying context information.
- *
- * @param[in] p_handle Device handle identifying device that is being stored.
- */
+* @brief Function pointers used to perform necessary action of applying context information.
+*
+* @param[in] p_handle Device handle identifying device that is being stored.
+*/
 typedef api_result_t (*service_context_apply_t)(dm_handle_t * p_handle);
 
 /**
- * @brief Function pointers used to call necessary storage function of store or update.
- *
- * @param[in]  p_dest Destination address where data is to be stored persistently.
- * @param[in]  p_src  Source address containing data to be stored.
- * @param[in]  size   Size of data to be stored expressed in bytes. Should be word aligned.
- * @param[in]  offset Offset in bytes to be applied when writing to the block.
- */
+* @brief Function pointers used to call necessary storage function of store or update.
+*
+* @param[in]  p_dest Destination address where data is to be stored persistently.
+* @param[in]  p_src  Source address containing data to be stored.
+* @param[in]  size   Size of data to be stored expressed in bytes. Should be word aligned.
+* @param[in]  offset Offset in bytes to be applied when writing to the block.
+*/
 typedef uint32_t (*storage_operation)(pstorage_handle_t * p_dest,
-                                      uint8_t *           p_src,
-                                      pstorage_size_t     size,
-                                      pstorage_size_t     offset);
+                                     uint8_t *           p_src,
+                                     pstorage_size_t     size,
+                                     pstorage_size_t     offset);
 /** @} */
 
 /**
- * @defgroup dm_tables  Module's internal tables.
- * @breif This section describes module's internal tables and static global variables needed for
- *        its functionality.
- * @{
- */
+* @defgroup dm_tables  Module's internal tables.
+* @breif This section describes module's internal tables and static global variables needed for
+*        its functionality.
+* @{
+*/
 #if(DEVICE_MANAGER_APP_CONTEXT_SIZE != 0)
 static uint8_t                 * m_app_context_table[DEVICE_MANAGER_MAX_BONDS];       /**< Table to remember application contexts of bonded devices. */
 #endif // DEVICE_MANAGER_APP_CONTEXT_SIZE
@@ -410,35 +409,35 @@ SDK_MUTEX_DEFINE(m_dm_mutex)                                                    
 
 /**@breif Dummy function, when there is no service registered. */
 static __INLINE api_result_t no_service_context_store(pstorage_handle_t const * p_block_handle,
-                                                      dm_handle_t const       * p_handle);
+                                                     dm_handle_t const       * p_handle);
 
 /**@breif GATT Server context store function. */
 static __INLINE api_result_t gatts_context_store(pstorage_handle_t const * p_block_handle,
-                                                 dm_handle_t const       * p_handle);
+                                                dm_handle_t const       * p_handle);
 
 /**@breif GATT Client context store function. */
 static __INLINE api_result_t gattc_context_store(pstorage_handle_t const * p_block_handle,
-                                                 dm_handle_t const       * p_handle);
+                                                dm_handle_t const       * p_handle);
 
 /**@breif  GATT Server & Client context store function. */
 static __INLINE api_result_t gattsc_context_store(pstorage_handle_t const * p_block_handle,
-                                                  dm_handle_t const       * p_handle);
+                                                 dm_handle_t const       * p_handle);
 
 /**@breif Dummy function, when there is no service registered. */
 static __INLINE api_result_t no_service_context_load(pstorage_handle_t const * p_block_handle,
-                                                     dm_handle_t const       * p_handle);
+                                                    dm_handle_t const       * p_handle);
 
 /**@breif GATT Server context load function. */
 static __INLINE api_result_t gatts_context_load(pstorage_handle_t const * p_block_handle,
-                                                 dm_handle_t const       * p_handle);
+                                                dm_handle_t const       * p_handle);
 
 /**@breif GATT Client context load function. */
 static __INLINE api_result_t gattc_context_load(pstorage_handle_t const * p_block_handle,
-                                                dm_handle_t const       * p_handle);
+                                               dm_handle_t const       * p_handle);
 
 /**@breif  GATT Server & Client context load function. */
 static __INLINE api_result_t gattsc_context_load(pstorage_handle_t const * p_block_handle,
-                                                 dm_handle_t const       * p_handle);
+                                                dm_handle_t const       * p_handle);
 
 /**@breif Dummy function, when there is no service registered. */
 static __INLINE api_result_t no_service_context_apply(dm_handle_t   * p_handle);
@@ -456,30 +455,30 @@ static __INLINE api_result_t gattsc_context_apply(dm_handle_t   * p_handle);
 /**< Array of function pointers to be able store based on service registered. */
 const service_context_access_t m_service_context_store[DM_SERVICE_CONTEXT_COUNT] =
 {
-    no_service_context_store,   /**< Dummy function, when there is no service context registered. */
-    gatts_context_store,        /**< GATT Server context store function. */
-    gattc_context_store,        /**< GATT Client context store function. */
-    gattsc_context_store        /**< GATT Server & Client context store function. */
+   no_service_context_store,   /**< Dummy function, when there is no service context registered. */
+   gatts_context_store,        /**< GATT Server context store function. */
+   gattc_context_store,        /**< GATT Client context store function. */
+   gattsc_context_store        /**< GATT Server & Client context store function. */
 };
 
 
 /**< Array of function pointers to be able store based on service registered. */
 const service_context_access_t m_service_context_load[DM_SERVICE_CONTEXT_COUNT] =
 {
-    no_service_context_load,   /**< Dummy function, when there is no service context registered. */
-    gatts_context_load,        /**< GATT Server context load function. */
-    gattc_context_load,        /**< GATT Client context load function. */
-    gattsc_context_load        /**< GATT Server & Client context load function. */
+   no_service_context_load,   /**< Dummy function, when there is no service context registered. */
+   gatts_context_load,        /**< GATT Server context load function. */
+   gattc_context_load,        /**< GATT Client context load function. */
+   gattsc_context_load        /**< GATT Server & Client context load function. */
 };
 
 
 /**< Array of function pointers to be able apply context based on service registered. */
 const service_context_apply_t m_service_context_apply[DM_SERVICE_CONTEXT_COUNT] =
 {
-    no_service_context_apply,   /**< Dummy function, when there is no service context registered. */
-    gatts_context_apply,        /**< GATT Server context store function. */
-    gattc_context_apply,        /**< GATT Client context store function. */
-    gattsc_context_apply        /**< GATT Server & Client context store function. */
+   no_service_context_apply,   /**< Dummy function, when there is no service context registered. */
+   gatts_context_apply,        /**< GATT Server context store function. */
+   gattc_context_apply,        /**< GATT Client context store function. */
+   gattsc_context_apply        /**< GATT Server & Client context store function. */
 };
 
 
@@ -487,8 +486,8 @@ const service_context_apply_t m_service_context_apply[DM_SERVICE_CONTEXT_COUNT] 
 const uint32_t m_context_init_len = 0xFFFFFFFF;
 
 /**
- * @brief Initializes application instance identified by 'index'.
- */
+* @brief Initializes application instance identified by 'index'.
+*/
 static __INLINE void application_instance_init(uint32_t index)
 {
     DM_TRC("[DM]: Initializing Application Instance 0x%08X.\r\n", index);

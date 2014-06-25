@@ -51,3 +51,4 @@ uint32_t ble_rpc_cmd_gap_decode(uint8_t * p_command, uint8_t op_code, uint32_t c
 #endif // BLE_RPC_CMD_DECODER_GAP_H__
 
 /** @} */
+
