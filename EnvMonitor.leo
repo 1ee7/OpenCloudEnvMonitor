@@ -10,22 +10,22 @@
 <preferences/>
 <find_panel_settings/>
 <vnodes>
-<v t="gan0ling.20140625083436.14526" a="E"><vh>Startup</vh>
+<v t="gan0ling.20140625083436.14526"><vh>Startup</vh>
 <v t="gan0ling.20140625083436.14450"><vh>Script</vh>
-<v t="gan0ling.20140625120422.3253" a="E"><vh>@path Src/Board/envMonitor</vh>
+<v t="gan0ling.20140625120422.3253"><vh>@path Src/Board/envMonitor</vh>
 <v t="gan0ling.20140625083436.9527"><vh>run_cmd</vh></v>
-<v t="gan0ling.20140625120901.3256" a="E"><vh>@button build</vh>
+<v t="gan0ling.20140625120901.3256"><vh>@button build</vh>
 <v t="gan0ling.20140625083436.9527"></v>
 </v>
-<v t="gan0ling.20140625120901.3257" a="E"><vh>@button clean</vh>
+<v t="gan0ling.20140625120901.3257"><vh>@button clean</vh>
 <v t="gan0ling.20140625083436.9527"></v>
 </v>
-<v t="gan0ling.20140625120901.3255" a="E"><vh>@button download</vh>
+<v t="gan0ling.20140625120901.3255"><vh>@button download</vh>
 <v t="gan0ling.20140625083436.9527"></v>
 </v>
 </v>
 </v>
-<v t="gan0ling.20140625083436.14527" a="E"><vh>@settings</vh>
+<v t="gan0ling.20140625083436.14527"><vh>@settings</vh>
 <v t="gan0ling.20140625083436.14528"><vh>@shortcuts</vh></v>
 </v>
 </v>
@@ -223,25 +223,45 @@
 <v t="gan0ling.20140624153650.3890"><vh>@shadow ffconf.h</vh></v>
 <v t="gan0ling.20140624153650.3891"><vh>@shadow integer.h</vh></v>
 </v>
-<v t="gan0ling.20140625132223.3261"><vh>@shadow Sheduler.c</vh></v>
+<v t="gan0ling.20140625145623.3311"><vh>@shadow Scheduler.h</vh></v>
+<v t="gan0ling.20140625132223.3261"><vh>@shadow Scheduler.c</vh></v>
+<v t="gan0ling.20140625145623.3312"><vh>@shadow SensorManager.h</vh></v>
 <v t="gan0ling.20140625132223.3262"><vh>@shadow SensorManager.c</vh></v>
+<v t="gan0ling.20140625145623.3313"><vh>@shadow SensorCapture.h</vh></v>
 <v t="gan0ling.20140625132223.3263"><vh>@shadow SensorCapture.c</vh></v>
+<v t="gan0ling.20140625145623.3314"><vh>@shadow SensorUploader.h</vh></v>
 <v t="gan0ling.20140625132223.3264"><vh>@shadow SensorUploader.c</vh></v>
+<v t="gan0ling.20140625145623.3315"><vh>@shadow SensorQuery.h</vh></v>
 <v t="gan0ling.20140625132223.3265"><vh>@shadow SensorQuery.c</vh></v>
+<v t="gan0ling.20140625145623.3316"><vh>@shadow SystemDebug.h</vh></v>
 <v t="gan0ling.20140625132223.3266"><vh>@shadow SystemDebug.c</vh></v>
+<v t="gan0ling.20140625145623.3317"><vh>@shadow PinMuxCfg.h</vh></v>
 <v t="gan0ling.20140625132223.3267"><vh>@shadow PinMuxCfg.c</vh></v>
+<v t="gan0ling.20140625145623.3318"><vh>@shadow Initializer.h</vh></v>
 <v t="gan0ling.20140625132223.3268"><vh>@shadow Initializer.c</vh></v>
+<v t="gan0ling.20140625145623.3319"><vh>@shadow ConfigParser.h</vh></v>
 <v t="gan0ling.20140625132223.3269"><vh>@shadow ConfigParser.c</vh></v>
+<v t="gan0ling.20140625145623.3320"><vh>@shadow BoardManager.h</vh></v>
 <v t="gan0ling.20140625132223.3270"><vh>@shadow BoardManager.c</vh></v>
+<v t="gan0ling.20140625145623.3321"><vh>@shadow DataCapture.h</vh></v>
 <v t="gan0ling.20140625132223.3271"><vh>@shadow DataCapture.c</vh></v>
+<v t="gan0ling.20140625145623.3322"><vh>@shadow DataStorage.h</vh></v>
 <v t="gan0ling.20140625132223.3272"><vh>@shadow DataStorage.c</vh></v>
+<v t="gan0ling.20140625145623.3323" a="E"><vh>@shadow OneWireDriver.h</vh></v>
 <v t="gan0ling.20140625132223.3273"><vh>@shadow OneWireDriver.c</vh></v>
+<v t="gan0ling.20140625145623.3324"><vh>@shadow SPIFlashDriver.h</vh></v>
 <v t="gan0ling.20140625132223.3274"><vh>@shadow SPIFlashDriver.c</vh></v>
+<v t="gan0ling.20140625145623.3325"><vh>@shadow I2CDriver.h</vh></v>
 <v t="gan0ling.20140625132223.3275"><vh>@shadow I2CDriver.c</vh></v>
+<v t="gan0ling.20140625145623.3326"><vh>@shadow ADCDriver.h</vh></v>
 <v t="gan0ling.20140625132223.3276"><vh>@shadow ADCDriver.c</vh></v>
+<v t="gan0ling.20140625145623.3327"><vh>@shadow SPIDriver.h</vh></v>
 <v t="gan0ling.20140625132223.3277"><vh>@shadow SPIDriver.c</vh></v>
+<v t="gan0ling.20140625145623.3328"><vh>@shadow GPIODriver.h</vh></v>
 <v t="gan0ling.20140625132223.3278"><vh>@shadow GPIODriver.c</vh></v>
+<v t="gan0ling.20140625145623.3329"><vh>@shadow UARTDriver.h</vh></v>
 <v t="gan0ling.20140625132223.3279"><vh>@shadow UARTDriver.c</vh></v>
+<v t="gan0ling.20140625145623.3330"><vh>@shadow BLEServicesDriver.h</vh></v>
 <v t="gan0ling.20140625132223.3280"><vh>@shadow BLEServicesDriver.c</vh></v>
 <v t="gan0ling.20140625132223.3281"><vh>@shadow main.c</vh></v>
 <v t="gan0ling.20140625083436.14449"><vh>@shadow Makefile</vh></v>
@@ -427,7 +447,7 @@
 <v t="gan0ling.20140624153650.1288"><vh>@shadow system_nrf51.c</vh></v>
 </v>
 <v t="gan0ling.20140624153650.1271"><vh>@path twi_master</vh>
-<v t="gan0ling.20140624153650.1272"><vh>@shadow twi_hw_master.c</vh></v>
+<v t="gan0ling.20140624153650.1272" a="E"><vh>@shadow twi_hw_master.c</vh></v>
 <v t="gan0ling.20140624153650.1273"><vh>@shadow twi_sw_master.c</vh></v>
 </v>
 </v>

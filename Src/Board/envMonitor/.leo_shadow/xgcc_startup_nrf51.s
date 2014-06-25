@@ -1,6 +1,9 @@
 #--unknown-language--@+leo-ver=4-thin
 #--unknown-language--@+node:gan0ling.20140625132223.3282:@shadow gcc_startup_nrf51.s
 #--unknown-language--@@language unknown_language
+#--unknown-language--@@tabwidth -4
+#--unknown-language--@+others
+#--unknown-language--@+node:gan0ling.20140625145623.3305:doc_string
 /* 
 Copyright (c) 2013, Nordic Semiconductor ASA
 All rights reserved.
@@ -35,7 +38,9 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 NOTE: Template files (including this one) are application specific and therefore 
 expected to be copied into the application project folder prior to its use!
 */
-
+#--unknown-language--@nonl
+#--unknown-language--@-node:gan0ling.20140625145623.3305:doc_string
+#--unknown-language--@+node:gan0ling.20140625145623.3306:stack_definition
     .syntax unified
     .arch armv6-m
 
@@ -53,7 +58,9 @@ __StackLimit:
     .size __StackLimit, . - __StackLimit
 __StackTop:
     .size __StackTop, . - __StackTop
-
+#--unknown-language--@nonl
+#--unknown-language--@-node:gan0ling.20140625145623.3306:stack_definition
+#--unknown-language--@+node:gan0ling.20140625145623.3307:heap_definition
     .section .heap
     .align 3
 #ifdef __HEAP_SIZE
@@ -70,7 +77,9 @@ __HeapBase:
     .size __HeapBase, . - __HeapBase
 __HeapLimit:
     .size __HeapLimit, . - __HeapLimit
-    
+#--unknown-language--@nonl
+#--unknown-language--@-node:gan0ling.20140625145623.3307:heap_definition
+#--unknown-language--@+node:gan0ling.20140625145623.3308:vector
     .section .Vectors
     .align 2
     .globl __Vectors
@@ -128,7 +137,9 @@ __Vectors:
 
 
     .size    __Vectors, . - __Vectors
-
+#--unknown-language--@nonl
+#--unknown-language--@-node:gan0ling.20140625145623.3308:vector
+#--unknown-language--@+node:gan0ling.20140625145623.3309:Reset
 /* Reset Handler */
 
     .equ    NRF_POWER_RAMON_ADDRESS,            0x40000524
@@ -180,6 +191,9 @@ Reset_Handler:
     .cantunwind
     .fnend
     .size   Reset_Handler,.-Reset_Handler
+#--unknown-language--@-node:gan0ling.20140625145623.3309:Reset
+#--unknown-language--@-others
+
 
     .section ".text"
 
