@@ -11,7 +11,7 @@
 <find_panel_settings/>
 <vnodes>
 <v t="gan0ling.20140625083436.14526" a="E"><vh>Startup</vh>
-<v t="gan0ling.20140625083436.14450" a="E"><vh>Script</vh>
+<v t="gan0ling.20140625083436.14450"><vh>Script</vh>
 <v t="gan0ling.20140625120422.3253" a="E"><vh>@path Src/Board/envMonitor</vh>
 <v t="gan0ling.20140625083436.9527"><vh>run_cmd</vh></v>
 <v t="gan0ling.20140625120901.3256" a="E"><vh>@button build</vh>
@@ -208,22 +208,44 @@
 <v t="gan0ling.20140624153650.1255" a="E"><vh>@path envMonitor</vh>
 <v t="gan0ling.20140624153650.3516"><vh>@path fatfs</vh>
 <v t="gan0ling.20140624153650.3973"><vh>@path option</vh>
-<v t="gan0ling.20140624153650.3974"><vh>@auto D:\work\OpenCloudEnvMonitor\Src\Board\envMonitor\fatfs\option\cc932.c</vh></v>
-<v t="gan0ling.20140624153650.3975"><vh>@auto D:\work\OpenCloudEnvMonitor\Src\Board\envMonitor\fatfs\option\cc936.c</vh></v>
-<v t="gan0ling.20140624153650.3976"><vh>@auto D:\work\OpenCloudEnvMonitor\Src\Board\envMonitor\fatfs\option\cc949.c</vh></v>
-<v t="gan0ling.20140624153650.3977"><vh>@auto D:\work\OpenCloudEnvMonitor\Src\Board\envMonitor\fatfs\option\cc950.c</vh></v>
-<v t="gan0ling.20140624153650.3978"><vh>@auto D:\work\OpenCloudEnvMonitor\Src\Board\envMonitor\fatfs\option\ccsbcs.c</vh></v>
-<v t="gan0ling.20140624153650.3979"><vh>@auto D:\work\OpenCloudEnvMonitor\Src\Board\envMonitor\fatfs\option\syscall.c</vh></v>
-<v t="gan0ling.20140624153650.3980"><vh>@auto D:\work\OpenCloudEnvMonitor\Src\Board\envMonitor\fatfs\option\unicode.c</vh></v>
+<v t="gan0ling.20140624153650.3974"><vh>@shadow cc932.c</vh></v>
+<v t="gan0ling.20140624153650.3975"><vh>@shadow cc936.c</vh></v>
+<v t="gan0ling.20140624153650.3976"><vh>@shadow cc949.c</vh></v>
+<v t="gan0ling.20140624153650.3977"><vh>@shadow cc950.c</vh></v>
+<v t="gan0ling.20140624153650.3978"><vh>@shadow ccsbcs.c</vh></v>
+<v t="gan0ling.20140624153650.3979"><vh>@shadow syscall.c</vh></v>
+<v t="gan0ling.20140624153650.3980"><vh>@shadow unicode.c</vh></v>
 </v>
-<v t="gan0ling.20140624153650.3886"><vh>@auto D:\work\OpenCloudEnvMonitor\Src\Board\envMonitor\fatfs\diskio.c</vh></v>
-<v t="gan0ling.20140624153650.3887"><vh>@auto D:\work\OpenCloudEnvMonitor\Src\Board\envMonitor\fatfs\diskio.h</vh></v>
-<v t="gan0ling.20140624153650.3888"><vh>@auto D:\work\OpenCloudEnvMonitor\Src\Board\envMonitor\fatfs\ff.c</vh></v>
-<v t="gan0ling.20140624153650.3889"><vh>@auto D:\work\OpenCloudEnvMonitor\Src\Board\envMonitor\fatfs\ff.h</vh></v>
-<v t="gan0ling.20140624153650.3890"><vh>@auto D:\work\OpenCloudEnvMonitor\Src\Board\envMonitor\fatfs\ffconf.h</vh></v>
-<v t="gan0ling.20140624153650.3891"><vh>@auto D:\work\OpenCloudEnvMonitor\Src\Board\envMonitor\fatfs\integer.h</vh></v>
+<v t="gan0ling.20140624153650.3886"><vh>@shadow diskio.c</vh></v>
+<v t="gan0ling.20140624153650.3887"><vh>@shadow diskio.h</vh></v>
+<v t="gan0ling.20140624153650.3888"><vh>@shadow ff.c</vh></v>
+<v t="gan0ling.20140624153650.3889"><vh>@shadow ff.h</vh></v>
+<v t="gan0ling.20140624153650.3890"><vh>@shadow ffconf.h</vh></v>
+<v t="gan0ling.20140624153650.3891"><vh>@shadow integer.h</vh></v>
 </v>
+<v t="gan0ling.20140625132223.3261"><vh>@shadow Sheduler.c</vh></v>
+<v t="gan0ling.20140625132223.3262"><vh>@shadow SensorManager.c</vh></v>
+<v t="gan0ling.20140625132223.3263"><vh>@shadow SensorCapture.c</vh></v>
+<v t="gan0ling.20140625132223.3264"><vh>@shadow SensorUploader.c</vh></v>
+<v t="gan0ling.20140625132223.3265"><vh>@shadow SensorQuery.c</vh></v>
+<v t="gan0ling.20140625132223.3266"><vh>@shadow SystemDebug.c</vh></v>
+<v t="gan0ling.20140625132223.3267"><vh>@shadow PinMuxCfg.c</vh></v>
+<v t="gan0ling.20140625132223.3268"><vh>@shadow Initializer.c</vh></v>
+<v t="gan0ling.20140625132223.3269"><vh>@shadow ConfigParser.c</vh></v>
+<v t="gan0ling.20140625132223.3270"><vh>@shadow BoardManager.c</vh></v>
+<v t="gan0ling.20140625132223.3271"><vh>@shadow DataCapture.c</vh></v>
+<v t="gan0ling.20140625132223.3272"><vh>@shadow DataStorage.c</vh></v>
+<v t="gan0ling.20140625132223.3273"><vh>@shadow OneWireDriver.c</vh></v>
+<v t="gan0ling.20140625132223.3274"><vh>@shadow SPIFlashDriver.c</vh></v>
+<v t="gan0ling.20140625132223.3275"><vh>@shadow I2CDriver.c</vh></v>
+<v t="gan0ling.20140625132223.3276"><vh>@shadow ADCDriver.c</vh></v>
+<v t="gan0ling.20140625132223.3277"><vh>@shadow SPIDriver.c</vh></v>
+<v t="gan0ling.20140625132223.3278"><vh>@shadow GPIODriver.c</vh></v>
+<v t="gan0ling.20140625132223.3279"><vh>@shadow UARTDriver.c</vh></v>
+<v t="gan0ling.20140625132223.3280"><vh>@shadow BLEServicesDriver.c</vh></v>
+<v t="gan0ling.20140625132223.3281"><vh>@shadow main.c</vh></v>
 <v t="gan0ling.20140625083436.14449"><vh>@shadow Makefile</vh></v>
+<v t="gan0ling.20140625132223.3282"><vh>@shadow gcc_startup_nrf51.s</vh></v>
 </v>
 </v>
 <v t="gan0ling.20140624153650.1242"><vh>@path Source</vh>
