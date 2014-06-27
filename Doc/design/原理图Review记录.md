@@ -4,6 +4,9 @@
 **参加人员：** 不限，有兴趣者都可编辑此文件，参与探讨
 
 ##1.EnvMonitor MainBoard图纸
+- 原理图PDF版本：[6月27日原理图](https://github.com/xiaogan-Studio/OpenCloudEnvMonitor/blob/master/Doc/hardware/%E5%8E%9F%E7%90%86%E5%9B%BE/EnvMonitor%202014-6-27.pdf)
+- 关于原理图的设计，请参考[here](https://github.com/xiaogan-Studio/OpenCloudEnvMonitor/blob/master/Doc/design/EnvMonitor%E5%8E%9F%E7%90%86%E5%9B%BE%E5%88%86%E6%9E%90.docx)
+
 ![Overview](./res/原理图Review/EnvMonitor 2014-6-27_03.png)
 ![nRF51822](./res/原理图Review/EnvMonitor 2014-6-27_01.png)
 ![充电电路](./res/原理图Review/EnvMonitor 2014-6-27_02.png)
@@ -11,8 +14,7 @@
 ![单总线](./res/原理图Review/EnvMonitor 2014-6-27_05.png)
 ![电源及ADC Reference](./res/原理图Review/EnvMonitor 2014-6-27_06.png)
 
-- 原理图PDF版本：[6月27日原理图](https://github.com/xiaogan-Studio/OpenCloudEnvMonitor/blob/master/Doc/hardware/%E5%8E%9F%E7%90%86%E5%9B%BE/EnvMonitor%202014-6-27.pdf)
-- 关于原理图的设计，请参考[here](https://github.com/xiaogan-Studio/OpenCloudEnvMonitor/blob/master/Doc/design/EnvMonitor%E5%8E%9F%E7%90%86%E5%9B%BE%E5%88%86%E6%9E%90.docx)
+
 
 ## 2.相关问题探讨
 ### 2.1 按键升级
@@ -31,7 +33,9 @@
 恐用户使用起来不方便。
 不如在原来基础上增添`VDD_Li_EN`的上拉电阻，但是只能从`VDD_3V3`上拉，而不是`VDD_Li`上拉，否则会造成系统无法断电。
 
-### 2.4 USB转SPI
+**强制断电，需要如何操作？**
+
+### 2.4 USB访问SPI Flash功能
 想法是这样的：当插入USB后，不仅可以对锂电池充电，而且可以更新固件，读取存储在Flash中的环境数据。
 
 但是由于nRF51822不支持USB，只能外扩芯片来解决。目前想到的方法有如下两种：
@@ -49,4 +53,11 @@
     - 方法2： 上位机与nRF51822通信，相互协商，确保不同时访问SPI Flash。通信方式可以选择SPI，nRF51822支持SPI从机功能。
 - [ ] 芯片选型，目前找到如下两款芯片：
    -  [Silicon Labs CP2130](http://www.silabs.com/products/interface/usbtouart/pages/usb-to-spi-bridge.aspx)
-   -  [SPI转USB](http://www.maximintegrated.com/cn/products/interface/controllers-expanders/MAX3421E.html)
+   -  [SPI转USB](http://www.maximintegrated.com/cn/products/interface/controllers-expanders/MAX3421E.html)      
+
+更详细的讨论，请参考[硬件设计文档](https://github.com/xiaogan-Studio/OpenCloudEnvMonitor/blob/master/Doc/design/nRF51822%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E7%9B%B8%E5%85%B3%E5%88%86%E6%9E%90.xlsx)
+中“增加USB功能的探讨”一页。
+
+### 2.5 充电时间的考虑
+目前USB充电电流为1000/R57= 1000/3000 约为333mA。是否考虑增大充电电流，从而减少充电时间。
+
