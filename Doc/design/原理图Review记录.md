@@ -53,7 +53,7 @@
     - 方法2： 上位机与nRF51822通信，相互协商，确保不同时访问SPI Flash。通信方式可以选择SPI，nRF51822支持SPI从机功能。
 - [ ] 芯片选型，目前找到如下两款芯片：
    -  [Silicon Labs CP2130](http://www.silabs.com/products/interface/usbtouart/pages/usb-to-spi-bridge.aspx)
-   -  [SPI转USB](http://www.maximintegrated.com/cn/products/interface/controllers-expanders/MAX3421E.html)      
+   -  [SPI转USB](http://www.maximintegrated.com/cn/products/interface/controllers-expanders/MAX3421E.html) 芯片太贵  
 
 更详细的讨论，请参考[硬件设计文档](https://github.com/xiaogan-Studio/OpenCloudEnvMonitor/blob/master/Doc/design/nRF51822%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E7%9B%B8%E5%85%B3%E5%88%86%E6%9E%90.xlsx)
 中“增加USB功能的探讨”一页。
