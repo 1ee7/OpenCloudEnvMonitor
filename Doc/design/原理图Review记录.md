@@ -42,18 +42,19 @@
 - [ ] 通过USB转SPI芯片，上位机直接访问SPI Flash。
       - 优点 ：简单，nRF51822不需要增加太多的代码
       - 缺点 ：USB连接时，无法进行数据采集工作。因为SPI Flash由USB上位机控制，nRF51822无法访问，此时只能采集一次数据就上传给蓝牙主机。
-- [ ] nRF51822外扩一个SPI转USB的芯片，从而增加USB功能。上位机通过USB与nRF51822通信，然后再由nRF51822将SPI Flash的数据传输给上位机
+- [x] nRF51822外扩一个SPI转USB的芯片，从而增加USB功能。上位机通过USB与nRF51822通信，然后再由nRF51822将SPI Flash的数据传输给上位机
      - 优点： SPI Flash由nRF1822控制，所以USB连接时，可以同时进行数据采集。交互性更好，可以实现更多其他的功能。
      - 缺点： 增加代码空间较大，调试复杂 
 
 待探讨确认问题：
-- [ ] 方案选择
+- [x] 方案选择: 使用第二种方案，nRF51822外扩SPI转USB芯片，与上位机通信。
 - [ ] 确保USB上位机及nRF51822不同时访问SPI Flash。
     - 方法1： 通过某种方式让nRF51822知道USB的连接状态，当USB连接后，自动禁止本身对SPI Flash的访问
     - 方法2： 上位机与nRF51822通信，相互协商，确保不同时访问SPI Flash。通信方式可以选择SPI，nRF51822支持SPI从机功能。
-- [ ] 芯片选型，目前找到如下两款芯片：
+- [ ] 芯片选型，目前找到如下三款芯片：
    -  [Silicon Labs CP2130](http://www.silabs.com/products/interface/usbtouart/pages/usb-to-spi-bridge.aspx)
-   -  [SPI转USB](http://www.maximintegrated.com/cn/products/interface/controllers-expanders/MAX3421E.html)      
+   -  [MAX3421](http://www.maximintegrated.com/cn/products/interface/controllers-expanders/MAX3421E.html) 芯片太贵  
+   -  [MCP2210](http://www.microchip.com/wwwproducts/Devices.aspx?product=MCP2210)
 
 更详细的讨论，请参考[硬件设计文档](https://github.com/xiaogan-Studio/OpenCloudEnvMonitor/blob/master/Doc/design/nRF51822%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E7%9B%B8%E5%85%B3%E5%88%86%E6%9E%90.xlsx)
 中“增加USB功能的探讨”一页。
