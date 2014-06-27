@@ -27,6 +27,26 @@
 ### 2.3 电源启动方式修改
 将`VDD_Li_EN`信号上拉到`VCC_3V3`，之所以这样做，原因如下：
 
-目前的启动方法是，长按S2开关，等系统启动后，立马去拉高`VDD__Li__EN`，这时才可以松开S2。在nRF1822置高`VDD_Li_EN`之前，不能松开S2，但是这个时机比较难掌控
+    目前的启动方法是，长按S2开关，等系统启动后，立马去拉高`VDD__Li__EN`，这时才可以松开S2。在nRF1822置高`VDD_Li_EN`之前，不能松开S2，但是这个时机比较难掌控
 恐用户使用起来不方便。
 不如在原来基础上增添`VDD_Li_EN`的上拉电阻，但是只能从`VDD_3V3`上拉，而不是`VDD_Li`上拉，否则会造成系统无法断电。
+
+### 2.4 USB转SPI
+想法是这样的：当插入USB后，不仅可以对锂电池充电，而且可以更新固件，读取存储在Flash中的环境数据。
+
+但是由于nRF51822不支持USB，只能外扩芯片来解决。目前想到的方法有如下两种：
+- [ ] 通过USB转SPI芯片，上位机直接访问SPI Flash。
+      - 优点 ：简单，nRF51822不需要增加太多的代码
+      - 缺点 ：USB连接时，无法进行数据采集工作。因为SPI Flash由USB上位机控制，nRF51822无法访问，此时只能采集一次数据就上传给蓝牙主机。
+- [ ] nRF51822外扩一个SPI转USB的芯片，从而增加USB功能。上位机通过USB与nRF51822通信，然后再由nRF51822将SPI Flash的数据传输给上位机
+     - 优点： SPI Flash由nRF1822控制，所以USB连接时，可以同时进行数据采集。交互性更好，可以实现更多其他的功能。
+     - 缺点： 增加代码空间较大，调试复杂 
+
+待探讨确认问题：
+- [ ] 方案选择
+- [ ] 确保USB上位机及nRF51822不同时访问SPI Flash。
+    - 方法1： 通过某种方式让nRF51822知道USB的连接状态，当USB连接后，自动禁止本身对SPI Flash的访问
+    - 方法2： 上位机与nRF51822通信，相互协商，确保不同时访问SPI Flash。通信方式可以选择SPI，nRF51822支持SPI从机功能。
+- [ ] 芯片选型，目前找到如下两款芯片：
+   -  [Silicon Labs CP2130](http://www.silabs.com/products/interface/usbtouart/pages/usb-to-spi-bridge.aspx)
+   -  [SPI转USB](http://www.maximintegrated.com/cn/products/interface/controllers-expanders/MAX3421E.html)
