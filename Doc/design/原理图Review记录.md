@@ -51,7 +51,7 @@
 - [ ] 确保USB上位机及nRF51822不同时访问SPI Flash。
     - 方法1： 通过某种方式让nRF51822知道USB的连接状态，当USB连接后，自动禁止本身对SPI Flash的访问
     - 方法2： 上位机与nRF51822通信，相互协商，确保不同时访问SPI Flash。通信方式可以选择SPI，nRF51822支持SPI从机功能。
-- [ ] 芯片选型，目前找到如下两款芯片：
+- [ ] 芯片选型，目前找到如下三款芯片：
    -  [Silicon Labs CP2130](http://www.silabs.com/products/interface/usbtouart/pages/usb-to-spi-bridge.aspx)
    -  [MAX3421](http://www.maximintegrated.com/cn/products/interface/controllers-expanders/MAX3421E.html) 芯片太贵  
    -  [MCP2210](http://www.microchip.com/wwwproducts/Devices.aspx?product=MCP2210)
