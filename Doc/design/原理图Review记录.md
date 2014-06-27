@@ -1,18 +1,17 @@
-#EnvMonitor MainBoardÔ­ÀíÍ¼µÚÒ»´ÎReview¼ÇÂ¼
-**Ê±¼ä:** 2014Äê6ÔÂ27ÈÕ
+#EnvMonitor MainBoardåŸç†å›¾ç¬¬ä¸€æ¬¡Review
+**æ—¶é—´:** 2014å¹´6æœˆ27æ—¥
 
-**²Î¼ÓÈËÔ±£º** ²»ÏŞ£¬ÓĞĞËÈ¤Õß¶¼¿É±à¼­´ËÎÄ¼ş£¬²ÎÓëÌ½ÌÖ
+**å‚åŠ äººå‘˜ï¼š** ä¸é™ï¼Œæœ‰å…´è¶£è€…éƒ½å¯ç¼–è¾‘æ­¤æ–‡ä»¶ï¼Œå‚ä¸æ¢è®¨
 
-##1.EnvMonitor MainBoardÍ¼Ö½
-![Overview](./res/Ô­ÀíÍ¼Review/EnvMonitor 2014-6-27_03.png)
-![nRF51822](./res/Ô­ÀíÍ¼Review/EnvMonitor 2014-6-27_01.png)
-![³äµçµçÂ·](./res/Ô­ÀíÍ¼Review/EnvMonitor 2014-6-27_02.png)
-![SPI Flash](./res/Ô­ÀíÍ¼Review/EnvMonitor 2014-6-27_04.png)
-![µ¥×ÜÏß](./res/Ô­ÀíÍ¼Review/EnvMonitor 2014-6-27_05.png)
-![µçÔ´¼°ADC Reference](./res/Ô­ÀíÍ¼Review/EnvMonitor 2014-6-27_06.png)
+##1.EnvMonitor MainBoardå›¾çº¸
+![Overview](./res/åŸç†å›¾Review/EnvMonitor 2014-6-27_03.png)
+![nRF51822](./res/åŸç†å›¾Review/EnvMonitor 2014-6-27_01.png)
+![å……ç”µç”µè·¯](./res/åŸç†å›¾Review/EnvMonitor 2014-6-27_02.png)
+![SPI Flash](./res/åŸç†å›¾Review/EnvMonitor 2014-6-27_04.png)
+![å•æ€»çº¿](./res/åŸç†å›¾Review/EnvMonitor 2014-6-27_05.png)
+![ç”µæºåŠADC Reference](./res/åŸç†å›¾Review/EnvMonitor 2014-6-27_06.png)
 
-Ô­ÀíÍ¼PDF°æ±¾£º[6ÔÂ27ÈÕÔ­ÀíÍ¼](https://github.com/xiaogan-Studio/OpenCloudEnvMonitor/blob/master/Doc/hardware/%E5%8E%9F%E7%90%86%E5%9B%BE/EnvMonitor%202014-6-27.pdf)
-¹ØÓÚÔ­ÀíÍ¼µÄÉè¼Æ£¬Çë²Î¿¼[here](https://github.com/xiaogan-Studio/OpenCloudEnvMonitor/blob/master/Doc/design/EnvMonitor%E5%8E%9F%E7%90%86%E5%9B%BE%E5%88%86%E6%9E%90.docx)
+- åŸç†å›¾PDFç‰ˆæœ¬ï¼š[6æœˆ27æ—¥åŸç†å›¾](https://github.com/xiaogan-Studio/OpenCloudEnvMonitor/blob/master/Doc/hardware/%E5%8E%9F%E7%90%86%E5%9B%BE/EnvMonitor%202014-6-27.pdf)
+- å…³äºåŸç†å›¾çš„è®¾è®¡ï¼Œè¯·å‚è€ƒ[here](https://github.com/xiaogan-Studio/OpenCloudEnvMonitor/blob/master/Doc/design/EnvMonitor%E5%8E%9F%E7%90%86%E5%9B%BE%E5%88%86%E6%9E%90.docx)
 
-## 2.Ïà¹ØÎÊÌâÌ½ÌÖ
-
+## 2.ç›¸å…³é—®é¢˜æ¢è®¨
