@@ -6,8 +6,10 @@
 **6月29日 Review完成，TODO List如下**  
 - [ ] 系统强制断电：由张建芳完成
 - [ ] USB转SPI芯片选型
-- [ ] SPI Flash 芯片SPI线和WP信号引出来，方便烧写器直接烧写
-- [ ] SPI Flash更换大容量的型号
+- [x] SPI Flash 芯片SPI线和WP信号引出来，方便烧写器直接烧写
+-     图纸更改时，可直接引出。
+- [x] SPI Flash更换大容量的型号
+-     型号已有，可以使用MX66L1G45G，1Gb，合计128MB。旺宏电子，SPI Flash最大的容量。
 
 ##1.EnvMonitor MainBoard图纸
 - 原理图PDF版本：[6月27日原理图](https://github.com/xiaogan-Studio/OpenCloudEnvMonitor/blob/master/Doc/hardware/%E5%8E%9F%E7%90%86%E5%9B%BE/EnvMonitor%202014-6-27.pdf)
