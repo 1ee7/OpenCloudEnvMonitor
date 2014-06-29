@@ -3,6 +3,12 @@
 
 **参加人员：** 不限，有兴趣者都可编辑此文件，参与探讨
 
+**6月29日 Review完成，TODO List如下**  
+- [ ] 系统强制断电：由张建芳完成
+- [ ] USB转SPI芯片选型
+- [ ] SPI Flash 芯片SPI线和WP信号引出来，方便烧写器直接烧写
+- [ ] SPI Flash更换大容量的型号
+
 ##1.EnvMonitor MainBoard图纸
 - 原理图PDF版本：[6月27日原理图](https://github.com/xiaogan-Studio/OpenCloudEnvMonitor/blob/master/Doc/hardware/%E5%8E%9F%E7%90%86%E5%9B%BE/EnvMonitor%202014-6-27.pdf)
 - 关于原理图的设计，请参考[here](https://github.com/xiaogan-Studio/OpenCloudEnvMonitor/blob/master/Doc/design/EnvMonitor%E5%8E%9F%E7%90%86%E5%9B%BE%E5%88%86%E6%9E%90.docx)
