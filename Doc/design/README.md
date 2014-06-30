@@ -44,7 +44,7 @@
    - BLE Service Driver模块详细设计
 
 ## envMonitor.asta
-  系统UML设计图表,保存系统软件设计相关的UML图纸。
+  系统UML设计图表,保存系统软件设计相关的UML图纸。请使用[astah打开](http://astah.net/editions/community)
   - System overview
   - 用户升级序列图(sequence diagram)
   - 固件启动序列图(sequence diagram)

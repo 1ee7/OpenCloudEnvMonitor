@@ -10,14 +10,14 @@
 <preferences/>
 <find_panel_settings/>
 <vnodes>
-<v t="gan0ling.20140625083436.14526"><vh>Startup</vh>
-<v t="gan0ling.20140625083436.14450"><vh>Script</vh>
-<v t="gan0ling.20140625120422.3253"><vh>@path Src/Board/envMonitor</vh>
+<v t="gan0ling.20140625083436.14526" a="E"><vh>Startup</vh>
+<v t="gan0ling.20140625083436.14450" a="E"><vh>Script</vh>
+<v t="gan0ling.20140625120422.3253" a="E"><vh>@path Src/Board/envMonitor</vh>
 <v t="gan0ling.20140625083436.9527"><vh>run_cmd</vh></v>
 <v t="gan0ling.20140625120901.3256"><vh>@button build</vh>
 <v t="gan0ling.20140625083436.9527"></v>
 </v>
-<v t="gan0ling.20140625120901.3257"><vh>@button clean</vh>
+<v t="gan0ling.20140625120901.3257" a="E"><vh>@button clean</vh>
 <v t="gan0ling.20140625083436.9527"></v>
 </v>
 <v t="gan0ling.20140625120901.3255"><vh>@button download</vh>
@@ -30,7 +30,7 @@
 </v>
 </v>
 <v t="gan0ling.20140624152950.1237" a="E"><vh>SourceCode</vh>
-<v t="gan0ling.20140624153650.1238" a="E"><vh>@path Src</vh>
+<v t="gan0ling.20140624153650.1238"><vh>@path Src</vh>
 <v t="gan0ling.20140624153650.1239"><vh>@path Include</vh>
 <v t="gan0ling.20140624153650.1243"><vh>@path app_common</vh>
 <v t="gan0ling.20140624153650.3812"><vh>@shadow app_button.h</vh></v>
@@ -523,6 +523,7 @@ def run_cmd(cmd):
     g.es(" ")
     g.es("-"*100)
     g.es("begin compile")
+    os.environ['path'] = ""
     process = subprocess.Popen(cmd,shell=False,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
     for i in process.communicate():
         g.es(i)
