@@ -12,3 +12,12 @@ OpenCloudEnvMonitor
   
   ![蓝牙采集模块简易框图](./Doc/design/res/EnvMonitor简易框图.png)
   
+
+
+## 相关资源列表
+### 硬件设计资源
+[envMonitor MainBoard工程目录](./Doc/hardware/原理图),包含PDF版本的原理图以及AD工程文件
+[envMonitor MainBoard原理图设计分析](./Doc/design/EnvMonitor原理图分析.docx)，简单分析，等硬件稳定后会提供详细分析文档。
+
+
+### 软件设计资源
