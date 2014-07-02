@@ -15,8 +15,11 @@ OpenCloudEnvMonitor
 
 
 ## 相关资源列表
+[oneNote共享笔记](https://onedrive.live.com/edit.aspx/Knowledge/OpenCloudEnvMonitor?cid=be5c272d3ffda8af&id=documents?&)，用于记录软硬件开发过程，包括各种问题的探讨资料。共享笔记，任何人均可编辑。
+
 ### 硬件设计资源
 [envMonitor MainBoard工程目录](./Doc/hardware/原理图),包含PDF版本的原理图以及AD工程文件
+
 [envMonitor MainBoard原理图设计分析](./Doc/design/EnvMonitor原理图分析.docx)，简单分析，等硬件稳定后会提供详细分析文档。
 
 
