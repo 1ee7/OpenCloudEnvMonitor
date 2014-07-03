@@ -11,6 +11,10 @@
 <find_panel_settings/>
 <vnodes>
 <v t="gan0ling.20140625083436.14526" a="E"><vh>Startup</vh>
+<v t="gan0ling.20140625083436.14527" a="E"><vh>@settings</vh>
+<v t="gan0ling.20140702183423.3360"><vh>@string view-rendered-default-kind = md</vh></v>
+<v t="gan0ling.20140625083436.14528"><vh>@shortcuts</vh></v>
+</v>
 <v t="gan0ling.20140625083436.14450" a="E"><vh>Script</vh>
 <v t="gan0ling.20140625120422.3253" a="E"><vh>@path Src/Board/envMonitor</vh>
 <v t="gan0ling.20140625083436.9527"><vh>run_cmd</vh></v>
@@ -25,12 +29,9 @@
 </v>
 </v>
 </v>
-<v t="gan0ling.20140625083436.14527"><vh>@settings</vh>
-<v t="gan0ling.20140625083436.14528"><vh>@shortcuts</vh></v>
-</v>
 </v>
 <v t="gan0ling.20140624152950.1237" a="E"><vh>SourceCode</vh>
-<v t="gan0ling.20140624153650.1238"><vh>@path Src</vh>
+<v t="gan0ling.20140624153650.1238" a="E"><vh>@path Src</vh>
 <v t="gan0ling.20140624153650.1239"><vh>@path Include</vh>
 <v t="gan0ling.20140624153650.1243"><vh>@path app_common</vh>
 <v t="gan0ling.20140624153650.3812"><vh>@shadow app_button.h</vh></v>
@@ -204,7 +205,7 @@
 <v t="gan0ling.20140624153650.3537"><vh>@shadow system_nrf51.h</vh></v>
 <v t="gan0ling.20140624153650.3538"><vh>@shadow twi_master.h</vh></v>
 </v>
-<v t="gan0ling.20140624153650.1240" a="E"><vh>@path Board</vh>
+<v t="gan0ling.20140624153650.1240"><vh>@path Board</vh>
 <v t="gan0ling.20140624153650.1255" a="E"><vh>@path envMonitor</vh>
 <v t="gan0ling.20140624153650.3516"><vh>@path fatfs</vh>
 <v t="gan0ling.20140624153650.3973"><vh>@path option</vh>
@@ -247,7 +248,7 @@
 <v t="gan0ling.20140625132223.3271"><vh>@shadow DataCapture.c</vh></v>
 <v t="gan0ling.20140625145623.3322"><vh>@shadow DataStorage.h</vh></v>
 <v t="gan0ling.20140625132223.3272"><vh>@shadow DataStorage.c</vh></v>
-<v t="gan0ling.20140625145623.3323" a="E"><vh>@shadow OneWireDriver.h</vh></v>
+<v t="gan0ling.20140625145623.3323"><vh>@shadow OneWireDriver.h</vh></v>
 <v t="gan0ling.20140625132223.3273"><vh>@shadow OneWireDriver.c</vh></v>
 <v t="gan0ling.20140625145623.3324"><vh>@shadow SPIFlashDriver.h</vh></v>
 <v t="gan0ling.20140625132223.3274"><vh>@shadow SPIFlashDriver.c</vh></v>
@@ -453,6 +454,7 @@
 </v>
 </v>
 </v>
+<v t="gan0ling.20140702183423.3358"><vh>DosFiles</vh></v>
 </vnodes>
 <tnodes>
 <t tx="gan0ling.20140624152950.1237"></t>
@@ -547,5 +549,7 @@ run_cmd("../../../prebuild/gnuWin/bin/make.exe")</t>
 @others
 
 run_cmd("../../../prebuild/gnuWin/bin/make.exe clean")</t>
+<t tx="gan0ling.20140702183423.3358"></t>
+<t tx="gan0ling.20140702183423.3360"></t>
 </tnodes>
 </leo_file>
