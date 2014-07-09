@@ -1,4 +1,4 @@
-![小甘工作室](./Doc/Logo.png)
+![小甘工作室](./Doc/res/Logo.png)
 OpenCloudEnvMonitor
 ===================
 
