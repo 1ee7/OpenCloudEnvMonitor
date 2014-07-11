@@ -38,4 +38,6 @@ DEVICE_VARIANT := xxaa
 USE_SOFTDEVICE := S110
 #USE_SOFTDEVICE := s210
 
+CFLAGS += --spec=nano.specs
+
 include $(SDK_PATH)Source/templates/gcc/Makefile.common
