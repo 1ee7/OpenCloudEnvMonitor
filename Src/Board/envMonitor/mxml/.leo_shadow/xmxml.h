@@ -1,3 +1,9 @@
+//@+leo-ver=4-thin
+//@+node:gan0ling.20140714211245.3363:@shadow mxml.h
+//@@language c
+//@@tabwidth -4
+//@+others
+//@+node:gan0ling.20140714211245.3524:mxml declarations
 /*
  * "$Id: mxml.h 451 2014-01-04 21:50:06Z msweet $"
  *
@@ -93,6 +99,8 @@ typedef enum mxml_type_e		/**** The XML node type. ****/
   MXML_CUSTOM				/* Custom data @since Mini-XML 2.1@ */
 } mxml_type_t;
 
+//@-node:gan0ling.20140714211245.3524:mxml declarations
+//@+node:gan0ling.20140714211245.3525:void
 typedef void (*mxml_custom_destroy_cb_t)(void *);
 					/**** Custom data destructor ****/
 
@@ -104,6 +112,9 @@ typedef struct mxml_attr_s		/**** An XML element attribute value. @private@ ****
   char			*name;		/* Attribute name */
   char			*value;		/* Attribute value */
 } 
+//@nonl
+//@-node:gan0ling.20140714211245.3525:void
+//@+node:gan0ling.20140714211245.3526:int
 mxml_attr_t;
 
 typedef struct mxml_element_s		/**** An XML element value. @private@ ****/
@@ -331,4 +342,8 @@ extern mxml_type_t	mxml_real_cb(mxml_node_t *node);
 /*
  * End of "$Id: mxml.h 451 2014-01-04 21:50:06Z msweet $".
  */
+//@-node:gan0ling.20140714211245.3526:int
+//@-others
 
+//@-node:gan0ling.20140714211245.3363:@shadow mxml.h
+//@-leo

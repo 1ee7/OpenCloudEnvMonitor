@@ -1,3 +1,9 @@
+//@+leo-ver=4-thin
+//@+node:gan0ling.20140714211245.3367:@shadow mxml-file.c
+//@@language c
+//@@tabwidth -4
+//@+others
+//@+node:gan0ling.20140714211245.3417:int
 /*
  * "$Id: mxml-file.c 455 2014-01-05 03:28:03Z msweet $"
  *
@@ -54,6 +60,9 @@ typedef struct _mxml_fdbuf_s		/**** File descriptor buffer ****/
 		*end,			/* End of buffer */
 		buffer[8192];		/* Character buffer */
 } 
+//@nonl
+//@-node:gan0ling.20140714211245.3417:int
+//@+node:gan0ling.20140714211245.3418:mxml_isspace
 _mxml_fdbuf_t;
 
 
@@ -77,6 +86,8 @@ static inline int	mxml_isspace(int ch)
 			  return (ch == ' ' || ch == '\t' || ch == '\r' ||
 			          ch == '\n');
 			}
+//@-node:gan0ling.20140714211245.3418:mxml_isspace
+//@+node:gan0ling.20140714211245.3419:mxmlLoadFd
 static mxml_node_t	*mxml_load_data(mxml_node_t *top, void *p,
 			                mxml_load_cb_t cb,
 			                _mxml_getc_cb_t getc_cb,
@@ -136,6 +147,8 @@ mxmlLoadFd(mxml_node_t    *top,		/* I - Top node */
 
   return (mxml_load_data(top, &buf, cb, mxml_fd_getc, MXML_NO_CALLBACK, NULL));
 }
+//@-node:gan0ling.20140714211245.3419:mxmlLoadFd
+//@+node:gan0ling.20140714211245.3420:mxmlLoadFile
 
 
 /*
@@ -164,6 +177,8 @@ mxmlLoadFile(mxml_node_t    *top,	/* I - Top node */
 
   return (mxml_load_data(top, fp, cb, mxml_file_getc, MXML_NO_CALLBACK, NULL));
 }
+//@-node:gan0ling.20140714211245.3420:mxmlLoadFile
+//@+node:gan0ling.20140714211245.3421:mxmlLoadString
 
 
 /*
@@ -193,6 +208,8 @@ mxmlLoadString(mxml_node_t    *top,	/* I - Top node */
   return (mxml_load_data(top, (void *)&s, cb, mxml_string_getc, MXML_NO_CALLBACK,
                          NULL));
 }
+//@-node:gan0ling.20140714211245.3421:mxmlLoadString
+//@+node:gan0ling.20140714211245.3422:mxmlSaveAllocString
 
 
 /*
@@ -256,6 +273,8 @@ mxmlSaveAllocString(
 
   return (s);
 }
+//@-node:gan0ling.20140714211245.3422:mxmlSaveAllocString
+//@+node:gan0ling.20140714211245.3423:mxmlSaveFd
 
 
 /*
@@ -304,6 +323,8 @@ mxmlSaveFd(mxml_node_t    *node,	/* I - Node to write */
 
   return (mxml_fd_write(&buf));
 }
+//@-node:gan0ling.20140714211245.3423:mxmlSaveFd
+//@+node:gan0ling.20140714211245.3424:mxmlSaveFile
 
 
 /*
@@ -343,6 +364,8 @@ mxmlSaveFile(mxml_node_t    *node,	/* I - Node to write */
 
   return (0);
 }
+//@-node:gan0ling.20140714211245.3424:mxmlSaveFile
+//@+node:gan0ling.20140714211245.3425:mxmlSaveString
 
 
 /*
@@ -399,6 +422,8 @@ mxmlSaveString(mxml_node_t    *node,	/* I - Node to write */
 
   return (ptr[0] - buffer);
 }
+//@-node:gan0ling.20140714211245.3425:mxmlSaveString
+//@+node:gan0ling.20140714211245.3426:mxmlSAXLoadFd
 
 
 /*
@@ -447,6 +472,8 @@ mxmlSAXLoadFd(mxml_node_t    *top,	/* I - Top node */
 
   return (mxml_load_data(top, &buf, cb, mxml_fd_getc, sax_cb, sax_data));
 }
+//@-node:gan0ling.20140714211245.3426:mxmlSAXLoadFd
+//@+node:gan0ling.20140714211245.3427:mxmlSAXLoadFile
 
 
 /*
@@ -485,6 +512,8 @@ mxmlSAXLoadFile(
 
   return (mxml_load_data(top, fp, cb, mxml_file_getc, sax_cb, sax_data));
 }
+//@-node:gan0ling.20140714211245.3427:mxmlSAXLoadFile
+//@+node:gan0ling.20140714211245.3428:mxmlSAXLoadString
 
 
 /*
@@ -523,6 +552,8 @@ mxmlSAXLoadString(
 
   return (mxml_load_data(top, (void *)&s, cb, mxml_string_getc, sax_cb, sax_data));
 }
+//@-node:gan0ling.20140714211245.3428:mxmlSAXLoadString
+//@+node:gan0ling.20140714211245.3429:mxmlSetCustomHandlers
 
 
 /*
@@ -548,6 +579,8 @@ mxmlSetCustomHandlers(
   global->custom_load_cb = load;
   global->custom_save_cb = save;
 }
+//@-node:gan0ling.20140714211245.3429:mxmlSetCustomHandlers
+//@+node:gan0ling.20140714211245.3430:mxmlSetErrorCallback
 
 
 /*
@@ -563,6 +596,8 @@ mxmlSetErrorCallback(mxml_error_cb_t cb)/* I - Error callback function */
 
   global->error_cb = cb;
 }
+//@-node:gan0ling.20140714211245.3430:mxmlSetErrorCallback
+//@+node:gan0ling.20140714211245.3431:mxmlSetWrapMargin
 
 
 /*
@@ -582,6 +617,8 @@ mxmlSetWrapMargin(int column)		/* I - Column for wrapping, 0 to disable wrapping
 
   global->wrap = column;
 }
+//@-node:gan0ling.20140714211245.3431:mxmlSetWrapMargin
+//@+node:gan0ling.20140714211245.3432:mxml_add_char
 
 
 /*
@@ -662,6 +699,8 @@ mxml_add_char(int  ch,			/* I  - Character to add */
 
   return (0);
 }
+//@-node:gan0ling.20140714211245.3432:mxml_add_char
+//@+node:gan0ling.20140714211245.3433:mxml_fd_getc
 
 
 /*
@@ -965,6 +1004,8 @@ mxml_fd_getc(void *p,			/* I  - File descriptor buffer */
 
   return (ch);
 }
+//@-node:gan0ling.20140714211245.3433:mxml_fd_getc
+//@+node:gan0ling.20140714211245.3434:mxml_fd_putc
 
 
 /*
@@ -996,6 +1037,8 @@ mxml_fd_putc(int  ch,			/* I - Character */
 
   return (0);
 }
+//@-node:gan0ling.20140714211245.3434:mxml_fd_putc
+//@+node:gan0ling.20140714211245.3435:mxml_fd_read
 
 
 /*
@@ -1039,6 +1082,8 @@ mxml_fd_read(_mxml_fdbuf_t *buf)		/* I - File descriptor buffer */
 
   return (0);
 }
+//@-node:gan0ling.20140714211245.3435:mxml_fd_read
+//@+node:gan0ling.20140714211245.3436:mxml_fd_write
 
 
 /*
@@ -1082,6 +1127,8 @@ mxml_fd_write(_mxml_fdbuf_t *buf)	/* I - File descriptor buffer */
 
   return (0);
 }
+//@-node:gan0ling.20140714211245.3436:mxml_fd_write
+//@+node:gan0ling.20140714211245.3437:mxml_file_getc
 
 
 /*
@@ -1299,6 +1346,8 @@ mxml_file_getc(void *p,			/* I  - Pointer to file */
 
   return (ch);
 }
+//@-node:gan0ling.20140714211245.3437:mxml_file_getc
+//@+node:gan0ling.20140714211245.3438:mxml_file_putc
 
 
 /*
@@ -1311,6 +1360,8 @@ mxml_file_putc(int  ch,			/* I - Character to write */
 {
   return (putc(ch, (FILE *)p) == EOF ? -1 : 0);
 }
+//@-node:gan0ling.20140714211245.3438:mxml_file_putc
+//@+node:gan0ling.20140714211245.3439:mxml_get_entity
 
 
 /*
@@ -1372,6 +1423,8 @@ mxml_get_entity(mxml_node_t *parent,	/* I  - Parent node */
 
   return (ch);
 }
+//@-node:gan0ling.20140714211245.3439:mxml_get_entity
+//@+node:gan0ling.20140714211245.3440:mxml_load_data
 
 
 /*
@@ -2076,6 +2129,8 @@ error:
 
   return (NULL);
 }
+//@-node:gan0ling.20140714211245.3440:mxml_load_data
+//@+node:gan0ling.20140714211245.3441:mxml_parse_element
 
 
 /*
@@ -2344,6 +2399,8 @@ error:
 
   return (EOF);
 }
+//@-node:gan0ling.20140714211245.3441:mxml_parse_element
+//@+node:gan0ling.20140714211245.3442:mxml_string_getc
 
 
 /*
@@ -2596,6 +2653,8 @@ mxml_string_getc(void *p,		/* I  - Pointer to file */
 
   return (EOF);
 }
+//@-node:gan0ling.20140714211245.3442:mxml_string_getc
+//@+node:gan0ling.20140714211245.3443:mxml_string_putc
 
 
 /*
@@ -2618,6 +2677,8 @@ mxml_string_putc(int  ch,		/* I - Character to write */
 
   return (0);
 }
+//@-node:gan0ling.20140714211245.3443:mxml_string_putc
+//@+node:gan0ling.20140714211245.3444:mxml_write_name
 
 
 /*
@@ -2693,6 +2754,8 @@ mxml_write_name(const char *s,		/* I - Name to write */
 
   return (0);
 }
+//@-node:gan0ling.20140714211245.3444:mxml_write_name
+//@+node:gan0ling.20140714211245.3445:mxml_write_node
 
 
 /*
@@ -2964,6 +3027,8 @@ mxml_write_node(mxml_node_t     *node,	/* I - Node to write */
 
   return (col);
 }
+//@-node:gan0ling.20140714211245.3445:mxml_write_node
+//@+node:gan0ling.20140714211245.3446:mxml_write_string
 
 
 /*
@@ -3004,6 +3069,8 @@ mxml_write_string(
 
   return (0);
 }
+//@-node:gan0ling.20140714211245.3446:mxml_write_string
+//@+node:gan0ling.20140714211245.3447:mxml_write_ws
 
 
 /*
@@ -3043,8 +3110,12 @@ mxml_write_ws(mxml_node_t     *node,	/* I - Current node */
 
   return (col);
 }
+//@-node:gan0ling.20140714211245.3447:mxml_write_ws
+//@-others
 
 
 /*
  * End of "$Id: mxml-file.c 455 2014-01-05 03:28:03Z msweet $".
  */
+//@-node:gan0ling.20140714211245.3367:@shadow mxml-file.c
+//@-leo
