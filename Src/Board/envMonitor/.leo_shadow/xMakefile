@@ -41,6 +41,8 @@ DEVICE_VARIANT := xxaa
 USE_SOFTDEVICE := S110
 #USE_SOFTDEVICE := s210
 
+CFLAGS += --spec=nano.specs
+
 include $(SDK_PATH)Source/templates/gcc/Makefile.common
 #--unknown-language--@-node:gan0ling.20140625083436.14449:@shadow Makefile
 #--unknown-language--@-leo
