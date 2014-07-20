@@ -10,7 +10,7 @@
 <preferences/>
 <find_panel_settings/>
 <vnodes>
-<v t="gan0ling.20140625083436.14526" a="E"><vh>Startup</vh>
+<v t="gan0ling.20140625083436.14526"><vh>Startup</vh>
 <v t="gan0ling.20140625083436.14527" a="E"><vh>@settings</vh>
 <v t="gan0ling.20140702183423.3360"><vh>@string view-rendered-default-kind = md</vh></v>
 <v t="gan0ling.20140625083436.14528"><vh>@shortcuts</vh></v>
@@ -207,7 +207,7 @@
 </v>
 <v t="gan0ling.20140624153650.1240" a="E"><vh>@path Board</vh>
 <v t="gan0ling.20140624153650.1255" a="E"><vh>@path envMonitor</vh>
-<v t="gan0ling.20140624153650.3516" a="E"><vh>@path fatfs</vh>
+<v t="gan0ling.20140624153650.3516"><vh>@path fatfs</vh>
 <v t="gan0ling.20140624153650.3973"><vh>@path option</vh>
 <v t="gan0ling.20140624153650.3974"><vh>@shadow cc932.c</vh></v>
 <v t="gan0ling.20140624153650.3975"><vh>@shadow cc936.c</vh></v>
@@ -217,14 +217,14 @@
 <v t="gan0ling.20140624153650.3979"><vh>@shadow syscall.c</vh></v>
 <v t="gan0ling.20140624153650.3980"><vh>@shadow unicode.c</vh></v>
 </v>
-<v t="gan0ling.20140624153650.3886"><vh>@shadow diskio.c</vh></v>
+<v t="gan0ling.20140624153650.3886" a="E"><vh>@shadow diskio.c</vh></v>
 <v t="gan0ling.20140624153650.3887"><vh>@shadow diskio.h</vh></v>
 <v t="gan0ling.20140624153650.3888"><vh>@shadow ff.c</vh></v>
 <v t="gan0ling.20140624153650.3889"><vh>@shadow ff.h</vh></v>
 <v t="gan0ling.20140624153650.3890"><vh>@shadow ffconf.h</vh></v>
 <v t="gan0ling.20140624153650.3891"><vh>@shadow integer.h</vh></v>
 </v>
-<v t="gan0ling.20140714211245.3362" a="E"><vh>@path mxml</vh>
+<v t="gan0ling.20140714211245.3362"><vh>@path mxml</vh>
 <v t="gan0ling.20140714211245.3363"><vh>@shadow mxml.h</vh></v>
 <v t="gan0ling.20140714211245.3364"><vh>@shadow mxml-attr.c</vh></v>
 <v t="gan0ling.20140714211245.3366"><vh>@shadow mxml-entity.c</vh></v>
@@ -239,7 +239,8 @@
 <v t="gan0ling.20140714211245.3375"><vh>@shadow mxml-string.c</vh></v>
 </v>
 <v t="gan0ling.20140625145623.3311"><vh>@shadow Scheduler.h</vh></v>
-<v t="gan0ling.20140625132223.3261"><vh>@shadow Scheduler.c</vh></v>
+<v t="gan0ling.20140625132223.3261"
+expanded="gan0ling.20140720110024.3505,"><vh>@shadow Scheduler.c</vh></v>
 <v t="gan0ling.20140625145623.3312"><vh>@shadow SensorManager.h</vh></v>
 <v t="gan0ling.20140625132223.3262"><vh>@shadow SensorManager.c</vh></v>
 <v t="gan0ling.20140625145623.3313"><vh>@shadow SensorCapture.h</vh></v>
@@ -250,8 +251,8 @@
 <v t="gan0ling.20140625132223.3265"><vh>@shadow SensorQuery.c</vh></v>
 <v t="gan0ling.20140625145623.3316"><vh>@shadow SystemDebug.h</vh></v>
 <v t="gan0ling.20140625132223.3266"><vh>@shadow SystemDebug.c</vh></v>
-<v t="gan0ling.20140625145623.3317"><vh>@shadow PinMuxCfg.h</vh></v>
-<v t="gan0ling.20140625132223.3267"><vh>@shadow PinMuxCfg.c</vh></v>
+<v t="gan0ling.20140625145623.3317"><vh>@shadow SettingManager.h</vh></v>
+<v t="gan0ling.20140625132223.3267"><vh>@shadow SettingManager.c</vh></v>
 <v t="gan0ling.20140625145623.3318"><vh>@shadow Initializer.h</vh></v>
 <v t="gan0ling.20140625132223.3268"><vh>@shadow Initializer.c</vh></v>
 <v t="gan0ling.20140625145623.3319"><vh>@shadow ConfigParser.h</vh></v>
