@@ -238,9 +238,9 @@
 <v t="gan0ling.20140714211245.3374"><vh>@shadow mxml-set.c</vh></v>
 <v t="gan0ling.20140714211245.3375"><vh>@shadow mxml-string.c</vh></v>
 </v>
-<v t="gan0ling.20140625145623.3311"><vh>@shadow Scheduler.h</vh></v>
-<v t="gan0ling.20140625132223.3261"
-expanded="gan0ling.20140720110024.3505,"><vh>@shadow Scheduler.c</vh></v>
+<v t="gan0ling.20140625145623.3311" a="E"><vh>@shadow Scheduler.h</vh></v>
+<v t="gan0ling.20140625132223.3261" a="E"
+expanded="gan0ling.20140720110024.3505,gan0ling.20140720110024.3507,gan0ling.20140720110024.3508,"><vh>@shadow Scheduler.c</vh></v>
 <v t="gan0ling.20140625145623.3312"><vh>@shadow SensorManager.h</vh></v>
 <v t="gan0ling.20140625132223.3262"><vh>@shadow SensorManager.c</vh></v>
 <v t="gan0ling.20140625145623.3313"><vh>@shadow SensorCapture.h</vh></v>
@@ -249,9 +249,9 @@ expanded="gan0ling.20140720110024.3505,"><vh>@shadow Scheduler.c</vh></v>
 <v t="gan0ling.20140625132223.3264"><vh>@shadow SensorUploader.c</vh></v>
 <v t="gan0ling.20140625145623.3315"><vh>@shadow SensorQuery.h</vh></v>
 <v t="gan0ling.20140625132223.3265"><vh>@shadow SensorQuery.c</vh></v>
-<v t="gan0ling.20140625145623.3316"><vh>@shadow SystemDebug.h</vh></v>
+<v t="gan0ling.20140625145623.3316" a="E"><vh>@shadow SystemDebug.h</vh></v>
 <v t="gan0ling.20140625132223.3266"><vh>@shadow SystemDebug.c</vh></v>
-<v t="gan0ling.20140625145623.3317"><vh>@shadow SettingManager.h</vh></v>
+<v t="gan0ling.20140625145623.3317" a="E"><vh>@shadow SettingManager.h</vh></v>
 <v t="gan0ling.20140625132223.3267"><vh>@shadow SettingManager.c</vh></v>
 <v t="gan0ling.20140625145623.3318"><vh>@shadow Initializer.h</vh></v>
 <v t="gan0ling.20140625132223.3268"><vh>@shadow Initializer.c</vh></v>

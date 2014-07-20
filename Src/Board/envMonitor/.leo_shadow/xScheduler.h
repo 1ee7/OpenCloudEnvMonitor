@@ -14,10 +14,18 @@
 #include "SettingManager.h"
 
 //@-node:gan0ling.20140720110024.3513:头文件
-//@+node:gan0ling.20140720110024.3519:变量声明及定义
+//@+node:gan0ling.20140720110024.3519:变量声明
 
 typedef void (*SCHEDULER_HANDLER)(void * p_context);
-//@-node:gan0ling.20140720110024.3519:变量声明及定义
+
+#define SCHEDULER_TIMER_OPSIZE   (8)
+#define SCHEDULER_MAX_TIMERS     (5)
+//@nonl
+//@-node:gan0ling.20140720110024.3519:变量声明
+//@+node:gan0ling.20140720110024.8523:SettingID定义
+#define SID_SCHEDULER_RTC_PRESCALER (0)
+//@nonl
+//@-node:gan0ling.20140720110024.8523:SettingID定义
 //@+node:gan0ling.20140720110024.3514:Scheduler_Init声明
 
 bool Scheduler_Init(void);
