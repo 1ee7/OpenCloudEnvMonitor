@@ -1,3 +1,6 @@
+#ifndef _SYSTEMDEBUG_H_
+#define _SYSTEMDEBUG_H_
+
 #include "nordic_common.h"
 #include "nrf.h"
 #include "nrf51.h"
@@ -28,10 +31,12 @@
 #define UEC_CODE_BITS        (0x7FFF)
 #define UEC_CODE_MASK        (~(UEC_CODE_BITS<<UEC_CODE_SHIFT))
 
-#define UEC(flag, module, func, code) （(flag & UEC_ERR_FLAG_BITS) << UEC_ERR_FLAG_SHIFT |\
-                                        (module & UEC_MODULE_BITS) << UEC_MODULE_ID_SHIFT |\
+#define UEC(flag, module, func, code) ((flag & UEC_ERR_FLAG_BITS) << UEC_ERR_FLAG_SHIFT |\
+                                        (module & UEC_MODULE_ID_BITS) << UEC_MODULE_ID_SHIFT |\
                                         (func & UEC_FUNCTION_BITS) << UEC_FUNCTION_SHIFT |\
-                                        (code & UEC_CODE_BITS) << UEC_CODE_SHIFT）
+                                        (code & UEC_CODE_BITS) << UEC_CODE_SHIFT)
+
+
                                         
 //--------------NRF SDK中定义的错误码---------------//
 #define UEC_CODE_NRF_SVC_HANDLER_MISSING         (0x1)     ///< SVC handler is missing
@@ -55,14 +60,14 @@
 
 #define UEC_CODE_FUNC_ENTER        (0x12)
 #define UEC_CODE_FUNC_EXIT         (0x13)
-#define UEC_CODE_PARAM_1           (0x14）
+#define UEC_CODE_PARAM_1           (0x14)
 #define UEC_CODE_PARAM_2           (0x15)
 #define UEC_CODE_PARAM_3           (0x16)
 #define UEC_CODE_PARAM_4           (0x17)
 
 #define UEC_CODE_USER              (0x65)
 
-bool SystemDebug_Init(void);
+int SystemDebug_Init(void);
 
 void SystemDebug_Deinit(void);
 
@@ -78,5 +83,6 @@ int SystemDebug_Output(int level, int msg);
 
 #define SystemDebug_WARNNING(msg)  do { SystemDebug_Output(SYSTEMDEBUG_LEVEL_WARN, msg); } while(0)
 
-#define SystemDebug_DEBUG(msg)  do { SystemDebug_Output(SYSTEMDEBUG_LEVEL_DBG, msg); } while(0)
+#define SystemDebug_DEBUG(msg)  do {SystemDebug_Output(SYSTEMDEBUG_LEVEL_DBG, msg);} while(0)
 
+#endif

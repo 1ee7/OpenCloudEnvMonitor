@@ -3,6 +3,11 @@
 //@@language c
 //@@tabwidth -2
 //@+others
+//@+node:gan0ling.20140819205828.3581:多重文件包含保护
+#ifndef _SYSTEMDEBUG_H_
+#define _SYSTEMDEBUG_H_
+
+//@-node:gan0ling.20140819205828.3581:多重文件包含保护
 //@+node:gan0ling.20140720110024.8530:头文件
 #include "nordic_common.h"
 #include "nrf.h"
@@ -38,10 +43,12 @@
 #define UEC_CODE_BITS        (0x7FFF)
 #define UEC_CODE_MASK        (~(UEC_CODE_BITS<<UEC_CODE_SHIFT))
 
-#define UEC(flag, module, func, code) （(flag & UEC_ERR_FLAG_BITS) << UEC_ERR_FLAG_SHIFT |\
-                                        (module & UEC_MODULE_BITS) << UEC_MODULE_ID_SHIFT |\
+#define UEC(flag, module, func, code) ((flag & UEC_ERR_FLAG_BITS) << UEC_ERR_FLAG_SHIFT |\
+                                        (module & UEC_MODULE_ID_BITS) << UEC_MODULE_ID_SHIFT |\
                                         (func & UEC_FUNCTION_BITS) << UEC_FUNCTION_SHIFT |\
-                                        (code & UEC_CODE_BITS) << UEC_CODE_SHIFT）
+                                        (code & UEC_CODE_BITS) << UEC_CODE_SHIFT)
+
+
                                         
 //@<<UEC通用CODE>>
 //@+node:gan0ling.20140803162743.3582:<<UEC通用CODE>>
@@ -67,7 +74,7 @@
 
 #define UEC_CODE_FUNC_ENTER        (0x12)
 #define UEC_CODE_FUNC_EXIT         (0x13)
-#define UEC_CODE_PARAM_1           (0x14）
+#define UEC_CODE_PARAM_1           (0x14)
 #define UEC_CODE_PARAM_2           (0x15)
 #define UEC_CODE_PARAM_3           (0x16)
 #define UEC_CODE_PARAM_4           (0x17)
@@ -78,7 +85,7 @@
 //@nl
 //@-node:gan0ling.20140803162743.3579:全局统一错误码相关宏
 //@+node:gan0ling.20140720110024.8532:SystemDebug_Init声明
-bool SystemDebug_Init(void);
+int SystemDebug_Init(void);
 
 //@-node:gan0ling.20140720110024.8532:SystemDebug_Init声明
 //@+node:gan0ling.20140720110024.8533:SystemDebug_Deinit声明
@@ -110,9 +117,12 @@ int SystemDebug_Output(int level, int msg);
 
 //@-node:gan0ling.20140803162743.3577:SystemDebug_WARNNING宏定义
 //@+node:gan0ling.20140803162743.3578:SystemDebug_DEBUG宏定义
-#define SystemDebug_DEBUG(msg)  do { SystemDebug_Output(SYSTEMDEBUG_LEVEL_DBG, msg); } while(0)
+#define SystemDebug_DEBUG(msg)  do {SystemDebug_Output(SYSTEMDEBUG_LEVEL_DBG, msg);} while(0)
 
 //@-node:gan0ling.20140803162743.3578:SystemDebug_DEBUG宏定义
+//@+node:gan0ling.20140819205828.3582:结束保护
+#endif
+//@-node:gan0ling.20140819205828.3582:结束保护
 //@-others
 //@nonl
 //@-node:gan0ling.20140625145623.3316:@shadow SystemDebug.h
