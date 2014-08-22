@@ -11,17 +11,17 @@
 <find_panel_settings/>
 <vnodes>
 <v t="gan0ling.20140625083436.14526"><vh>Startup</vh>
-<v t="gan0ling.20140625083436.14527" a="E"><vh>@settings</vh>
+<v t="gan0ling.20140625083436.14527"><vh>@settings</vh>
 <v t="gan0ling.20140702183423.3360"><vh>@string view-rendered-default-kind = md</vh></v>
 <v t="gan0ling.20140625083436.14528"><vh>@shortcuts</vh></v>
 </v>
-<v t="gan0ling.20140625083436.14450" a="E"><vh>Script</vh>
-<v t="gan0ling.20140625120422.3253" a="E"><vh>@path Src/Board/envMonitor</vh>
+<v t="gan0ling.20140625083436.14450"><vh>Script</vh>
+<v t="gan0ling.20140625120422.3253"><vh>@path Src/Board/envMonitor</vh>
 <v t="gan0ling.20140625083436.9527"><vh>run_cmd</vh></v>
 <v t="gan0ling.20140625120901.3256"><vh>@button build</vh>
 <v t="gan0ling.20140625083436.9527"></v>
 </v>
-<v t="gan0ling.20140625120901.3257" a="E"><vh>@button clean</vh>
+<v t="gan0ling.20140625120901.3257"><vh>@button clean</vh>
 <v t="gan0ling.20140625083436.9527"></v>
 </v>
 <v t="gan0ling.20140625120901.3255"><vh>@button download</vh>
@@ -217,7 +217,7 @@
 <v t="gan0ling.20140624153650.3979"><vh>@shadow syscall.c</vh></v>
 <v t="gan0ling.20140624153650.3980"><vh>@shadow unicode.c</vh></v>
 </v>
-<v t="gan0ling.20140624153650.3886" a="E"><vh>@shadow diskio.c</vh></v>
+<v t="gan0ling.20140624153650.3886"><vh>@shadow diskio.c</vh></v>
 <v t="gan0ling.20140624153650.3887"><vh>@shadow diskio.h</vh></v>
 <v t="gan0ling.20140624153650.3888"><vh>@shadow ff.c</vh></v>
 <v t="gan0ling.20140624153650.3889"><vh>@shadow ff.h</vh></v>
@@ -238,9 +238,9 @@
 <v t="gan0ling.20140714211245.3374"><vh>@shadow mxml-set.c</vh></v>
 <v t="gan0ling.20140714211245.3375"><vh>@shadow mxml-string.c</vh></v>
 </v>
-<v t="gan0ling.20140625145623.3311" descendentVnodeUnknownAttributes="7d71005503302e3071017d7102285508616e6e6f7461746571037d71042855087072696f7269747971054b13550a707269736574646174657106550a323031342d30382d3036710775550b6c696e65594f666673657471084b03550569636f6e7371095d710a7d710b2855026f6e710c5505766e6f6465710d550474797065710e550466696c65710f5507796f666673657471104b005508636c656f49636f6e71115501317112680f5853000000433a5c507974686f6e32375c6c69625c736974652d7061636b616765735c6c656f2d342e31315f66696e616c2d7079322e372e6567675c6c656f5c49636f6e735c636c656f5c63686b626f78626c6b2e706e67711355047870616471144b01550577686572657115550e6265666f7265486561646c696e6571165507786f666673657471174b02550772656c5061746871185812000000636c656f5c63686b626f78626c6b2e706e677119756175732e"
-expanded="gan0ling.20140720110024.3519,"><vh>@shadow Scheduler.h</vh></v>
-<v t="gan0ling.20140625132223.3261"><vh>@shadow Scheduler.c</vh></v>
+<v t="gan0ling.20140625145623.3311" a="E" descendentVnodeUnknownAttributes="7d71005503302e3171017d7102285808000000616e6e6f7461746571037d71042855087072696f7269747971054930300a550a707269736574646174657106550a323031342d30382d3138710775580b0000006c696e65594f666673657471084b0075732e"><vh>@shadow Scheduler.h</vh></v>
+<v t="gan0ling.20140625132223.3261" a="E" descendentVnodeUnknownAttributes="7d710055013071017d7102285508616e6e6f7461746571037d71042855087072696f7269747971054d0f27550a707269736574646174657106550a323031342d30382d3138710775550b6c696e65594f666673657471084b0075732e"
+expanded="gan0ling.20140803162743.3554,"><vh>@shadow Scheduler.c</vh></v>
 <v t="gan0ling.20140625145623.3312"><vh>@shadow SensorManager.h</vh></v>
 <v t="gan0ling.20140625132223.3262"><vh>@shadow SensorManager.c</vh></v>
 <v t="gan0ling.20140625145623.3313"><vh>@shadow SensorCapture.h</vh></v>
@@ -249,12 +249,12 @@ expanded="gan0ling.20140720110024.3519,"><vh>@shadow Scheduler.h</vh></v>
 <v t="gan0ling.20140625132223.3264"><vh>@shadow SensorUploader.c</vh></v>
 <v t="gan0ling.20140625145623.3315"><vh>@shadow SensorQuery.h</vh></v>
 <v t="gan0ling.20140625132223.3265"><vh>@shadow SensorQuery.c</vh></v>
-<v t="gan0ling.20140625145623.3316" a="E"
-expanded="gan0ling.20140803162743.3579,"><vh>@shadow SystemDebug.h</vh></v>
+<v t="gan0ling.20140625145623.3316"><vh>@shadow SystemDebug.h</vh></v>
 <v t="gan0ling.20140625132223.3266"><vh>@shadow SystemDebug.c</vh></v>
-<v t="gan0ling.20140625145623.3317" a="E"><vh>@shadow SettingManager.h</vh></v>
-<v t="gan0ling.20140625132223.3267"><vh>@shadow SettingManager.c</vh></v>
-<v t="gan0ling.20140625145623.3318"><vh>@shadow Initializer.h</vh></v>
+<v t="gan0ling.20140625145623.3317" a="E" descendentVnodeUnknownAttributes="7d71005503302e3171017d7102285808000000616e6e6f7461746571037d71042855087072696f7269747971054930300a550a707269736574646174657106550a323031342d30382d3138710775580b0000006c696e65594f666673657471084b0075732e"><vh>@shadow SettingManager.h</vh></v>
+<v t="gan0ling.20140625132223.3267" a="E"
+expanded="gan0ling.20140820074143.3595,"><vh>@shadow SettingManager.c</vh></v>
+<v t="gan0ling.20140625145623.3318" a="E"><vh>@shadow Initializer.h</vh></v>
 <v t="gan0ling.20140625132223.3268"><vh>@shadow Initializer.c</vh></v>
 <v t="gan0ling.20140625145623.3319"><vh>@shadow ConfigParser.h</vh></v>
 <v t="gan0ling.20140625132223.3269"><vh>@shadow ConfigParser.c</vh></v>
@@ -464,7 +464,7 @@ expanded="gan0ling.20140803162743.3579,"><vh>@shadow SystemDebug.h</vh></v>
 <v t="gan0ling.20140624153650.1288"><vh>@shadow system_nrf51.c</vh></v>
 </v>
 <v t="gan0ling.20140624153650.1271"><vh>@path twi_master</vh>
-<v t="gan0ling.20140624153650.1272" a="E"><vh>@shadow twi_hw_master.c</vh></v>
+<v t="gan0ling.20140624153650.1272"><vh>@shadow twi_hw_master.c</vh></v>
 <v t="gan0ling.20140624153650.1273"><vh>@shadow twi_sw_master.c</vh></v>
 </v>
 </v>
@@ -531,7 +531,9 @@ expanded="gan0ling.20140803162743.3579,"><vh>@shadow SystemDebug.h</vh></v>
 <t tx="gan0ling.20140625083436.14450"></t>
 <t tx="gan0ling.20140625083436.14526"></t>
 <t tx="gan0ling.20140625083436.14527"></t>
-<t tx="gan0ling.20140625083436.14528">auto-complete-force  = Ctrl-Alt</t>
+<t tx="gan0ling.20140625083436.14528">auto-complete-force  = Ctrl-Alt
+goto-next-node       = Alt-Shift-N
+goto-prev-node       = Alt-Shift-B</t>
 <t tx="gan0ling.20140625083436.9527">@language python
 @tabwidth -4
 
