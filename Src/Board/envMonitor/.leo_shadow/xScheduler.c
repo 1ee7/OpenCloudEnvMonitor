@@ -14,26 +14,37 @@
 #include "Scheduler.h"
 
 //@-node:gan0ling.20140803162743.3563:头文件
+//@+node:gan0ling.20140807165228.3554:全局变量
+time_val        g_system_time;
+int             g_rtcTimerID    = 0;
+static char     g_save_time_cnt = SYSTIME_SAVE_CNT;
+
+//@-node:gan0ling.20140807165228.3554:全局变量
 //@+node:gan0ling.20140803162743.3554:Scheduler_Init
 
 /*
  *  初始化Scheduler模块，由Initializer模块调用。
  */
-bool Scheduler_Init(void)
+int Scheduler_Init(void)
 {
   //@  <<局部变量>>
   //@+node:gan0ling.20140803162743.3564:<<局部变量>>
-  int rtcPrescaler = 327;
-  //@nonl
+  int   rtcPrescaler = 327;
+  char *pTime        = NULL;
+  int   err          = 0;
+
   //@-node:gan0ling.20140803162743.3564:<<局部变量>>
   //@nl
-
+  
   SystemDebug_DEBUG(UEC(0,MID_SCHEDULER,UEC_FUNC_SCHEDULER_INIT,UEC_CODE_FUNC_ENTER));
   
   //@  <<app_timer初始化>>
   //@+node:gan0ling.20140803162743.3565:<<app_timer初始化>>
   //调用APP_TIMER_INIT宏初始化app_timer模块。PERSCLAER为327，≈100Hz
-  rtcPrescaler = SettingManager_Read(SETTINGMAMAGER_ID(MID_SCHEDULER,SID_SCHEDULER_RTC_PRESCALER))
+  err = SettingManager_Read(SETTINGMANAGER_ID(MID_SCHEDULER,SID_SCHEDULER_RTC_PRESCALER),(char*)&rtcPrescaler, sizeof(rtcPrescaler));
+  if (err != 0) {
+    return err;
+  }
 
   APP_TIMER_INIT(rtcPrescaler, SCHEDULER_MAX_TIMERS, SCHEDULER_TIMER_OPSIZE, true);
   //@nonl
@@ -45,9 +56,25 @@ bool Scheduler_Init(void)
 
   //@-node:gan0ling.20140806143636.3547:<<app_scheduler初始化>>
   //@nl
+  //@  <<系统时钟初始化>>
+  //@+node:gan0ling.20140807165228.3552:<<系统时钟初始化>>
+  err = SettingManager_Read(SYSTIME_SETID,(char*)&g_system_time, sizeof(time_val));
+  if (err) {
+    return err;
+  }
+
+  g_rtcTimerID = Scheduler_Register(1,Scheduler_sysTimeHandler);
+  if (g_rtcTimerID < 0) {
+    err = UEC(1,MID_SCHEDULER, UEC_FUNC_SCHEDULER_INIT, UEC_SCHEDULER_SYSTIME_REG);
+    SystemDebug_ERROR(err);
+    return err;
+  }
+
+  //@-node:gan0ling.20140807165228.3552:<<系统时钟初始化>>
+  //@nl
   
   SystemDebug_DEBUG(UEC(0,MID_SCHEDULER,UEC_FUNC_SCHEDULER_INIT,UEC_CODE_FUNC_EXIT));
-  return true;
+  return 0;
 }
 //@-node:gan0ling.20140803162743.3554:Scheduler_Init
 //@+node:gan0ling.20140803162743.3555:Scheduler_Deinit
@@ -67,11 +94,11 @@ void Scheduler_Deinit(void)
 }
 //@-node:gan0ling.20140803162743.3555:Scheduler_Deinit
 //@+node:gan0ling.20140803162743.3556:Scheduler_Register
-int Scheduler_Register(uint32_t timeout, SCHEDLUER_HANDLER handler)
+int Scheduler_Register(uint32_t timeout, SCHEDULER_HANDLER handler)
 {
   //@  <<局部变量>>
   //@+node:gan0ling.20140803162743.3568:<<局部变量>>
-  int ret = -1;
+  int ret = 0;
   app_timer_id_t id = 0;
 
   //@-node:gan0ling.20140803162743.3568:<<局部变量>>
@@ -108,11 +135,11 @@ int Scheduler_Register(uint32_t timeout, SCHEDLUER_HANDLER handler)
   //@+node:gan0ling.20140803162743.3571:<<启动timer>>
   ret = app_timer_start(id, timeout, NULL);
   if (ret != NRF_SUCCESS) {
-    int err = UEC(1,MID_SCHEDULER,UEC_FUNC_SCHEDULER_REG,(ret|UEC_CODE_SCHEDULER_APP_TIMER_START);
+    int err = UEC(1,MID_SCHEDULER,UEC_FUNC_SCHEDULER_REG,(ret|UEC_CODE_SCHEDULER_APP_TIMER_START));
     SystemDebug_ERROR(err);
     return err;
   }
-  ret = id
+  ret = id;
 
   //@-node:gan0ling.20140803162743.3571:<<启动timer>>
   //@nl
@@ -177,7 +204,7 @@ int Scheduler_Run(void)
     //@+node:gan0ling.20140806143636.3552:<<PowerManager>>
     err = sd_app_evt_wait();
     if (err != NRF_SUCCESS) {
-      SystemDebug_ERROR(UEC(1, MID_SCHEDULER, MID_FUNC_SCHEDULER_RUN, (err|UEC_CODE_SCHEDULER_SD_APP_EVT_WAIT)););
+      SystemDebug_ERROR(UEC(1, MID_SCHEDULER, UEC_FUNC_SCHEDULER_RUN, (err|UEC_CODE_SCHEDULER_SD_APP_EVT_WAIT)));
     }
 
     //@-node:gan0ling.20140806143636.3552:<<PowerManager>>
@@ -188,6 +215,77 @@ int Scheduler_Run(void)
 }
 //@nonl
 //@-node:gan0ling.20140806143636.3550:Scheduler_Run
+//@+node:gan0ling.20140809152829.3555:Scheduler_sysTimeHandler
+static void Scheduler_sysTimeHandler(void *pContext)
+{
+  //@  <<局部变量>>
+  //@+node:gan0ling.20140809152829.3556:<<局部变量>>
+  //@-node:gan0ling.20140809152829.3556:<<局部变量>>
+  //@nl
+  SystemDebug_DEBUG(UEC(0,MID_SCHEDULER,UEC_FUNC_SCHEDULER_SYSTIME,UEC_CODE_FUNC_ENTER));
+  
+  //@  <<增加系统时间>>
+  //@+node:gan0ling.20140809152829.3558:<<增加系统时间>>
+  if (g_system_time.msecond < 99) {
+    //毫秒数还未达到1秒的边界
+    ++g_system_time.msecond;
+  } else {
+    //毫秒数达到1秒的边界，秒数增加1，并判断是否达到分钟的边界。
+    g_system_time.msecond = 0;
+    ++g_system_time.second;
+    if (g_system_time.second == 60) {
+      g_system_time.second = 0;
+      ++g_system_time.minute;
+      if ( g_system_time.minute == 60) {
+        g_system_time.minute = 0;
+        ++g_system_time.hour;
+        if (g_system_time.hour == 24) {
+          g_system_time.hour = 0;
+          ++g_system_time.day;
+          if (g_system_time.month == 2) {
+            if (g_system_time.day == 28) {
+              g_system_time.day = 0;
+              ++g_system_time.month;
+            }
+          } else if (g_system_time.month == 1 || g_system_time.month == 3 ||
+                     g_system_time.month == 5 || g_system_time.month == 7    ||
+                     g_system_time.month == 8 || g_system_time.month == 10  ||
+                     g_system_time.month == 12) {
+             if (g_system_time.day == 31) {
+               g_system_time.day = 0;
+               ++g_system_time.month;
+               if (g_system_time.month == 13) {
+                 g_system_time.month = 1;
+                 ++g_system_time.year;
+               }
+             } 
+          } else {
+            if (g_system_time.day == 30) {
+              g_system_time.day = 0;
+              ++g_system_time.month;
+            }
+          }
+        }
+      }
+    }
+  }
+  //@nonl
+  //@-node:gan0ling.20140809152829.3558:<<增加系统时间>>
+  //@nl
+  //@  <<定期保存系统时间>>
+  //@+node:gan0ling.20140809152829.3557:<<定期保存系统时间>>
+  --g_save_time_cnt;
+  if (g_save_time_cnt == 0) {
+    g_save_time_cnt = SYSTIME_SAVE_CNT;
+    SettingManager_Write(SYSTIME_SETID, (char*)&g_system_time, sizeof(time_val));
+  }
+
+  //@-node:gan0ling.20140809152829.3557:<<定期保存系统时间>>
+  //@nl
+  SystemDebug_DEBUG(UEC(0,MID_SCHEDULER,UEC_FUNC_SCHEDULER_SYSTIME,UEC_CODE_FUNC_EXIT));
+}
+//@nonl
+//@-node:gan0ling.20140809152829.3555:Scheduler_sysTimeHandler
 //@-others
 //@-node:gan0ling.20140625132223.3261:@shadow Scheduler.c
 //@-leo
