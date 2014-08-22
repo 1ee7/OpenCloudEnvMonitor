@@ -10,8 +10,8 @@
 <preferences/>
 <find_panel_settings/>
 <vnodes>
-<v t="gan0ling.20140625083436.14526"><vh>Startup</vh>
-<v t="gan0ling.20140625083436.14527"><vh>@settings</vh>
+<v t="gan0ling.20140625083436.14526" a="E"><vh>Startup</vh>
+<v t="gan0ling.20140625083436.14527" a="E"><vh>@settings</vh>
 <v t="gan0ling.20140702183423.3360"><vh>@string view-rendered-default-kind = md</vh></v>
 <v t="gan0ling.20140625083436.14528"><vh>@shortcuts</vh></v>
 </v>
@@ -532,8 +532,12 @@ expanded="gan0ling.20140820074143.3595,"><vh>@shadow SettingManager.c</vh></v>
 <t tx="gan0ling.20140625083436.14526"></t>
 <t tx="gan0ling.20140625083436.14527"></t>
 <t tx="gan0ling.20140625083436.14528">auto-complete-force  = Ctrl-Alt
-goto-next-node       = Alt-Shift-N
-goto-prev-node       = Alt-Shift-B</t>
+goto-next-node       = Alt-Shift-D
+goto-prev-node       = Alt-Shift-U
+go-back              = Alt-Shift-B
+go-forward           = Alt-Shift-F
+go-anywhere          = Alt-Shift-A
+</t>
 <t tx="gan0ling.20140625083436.9527">@language python
 @tabwidth -4
 
